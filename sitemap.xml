@@ -213,6 +213,11 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-frontend/docs/node/principle/</loc>
+    <lastmod>2020-03-14T16:44:56+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-frontend/docs/client/android/design/</loc>
     <lastmod>2020-03-08T21:59:12+08:00</lastmod>
   </url>
@@ -245,11 +250,6 @@
   <url>
     <loc>https://ikingye.github.io/study-frontend/docs/javascript/design/</loc>
     <lastmod>2020-03-08T21:59:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-frontend/docs/node/design/</loc>
-    <lastmod>2020-03-14T15:19:39+08:00</lastmod>
   </url>
   
   <url>
@@ -458,6 +458,11 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-frontend/docs/node/basic/build/gulp/</loc>
+    <lastmod>2020-03-14T16:44:56+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-frontend/docs/client/android/basic/practice/snippet/</loc>
     <lastmod>2020-03-08T21:59:12+08:00</lastmod>
   </url>
@@ -500,6 +505,11 @@
   <url>
     <loc>https://ikingye.github.io/study-frontend/docs/client/</loc>
     <lastmod>2020-03-08T21:59:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-frontend/docs/node/basic/build/</loc>
+    <lastmod>2020-03-14T16:44:56+08:00</lastmod>
   </url>
   
   <url>

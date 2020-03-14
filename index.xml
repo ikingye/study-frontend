@@ -226,6 +226,15 @@
     </item>
     
     <item>
+      <title>gulp</title>
+      <link>https://ikingye.github.io/study-frontend/docs/node/basic/build/gulp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-frontend/docs/node/basic/build/gulp/</guid>
+      <description>gulp 类似与 make 参考：https://learnxinyminutes.com/docs/zh-cn/make-cn/</description>
+    </item>
+    
+    <item>
       <title>Jquery</title>
       <link>https://ikingye.github.io/study-frontend/docs/lib/jquery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
