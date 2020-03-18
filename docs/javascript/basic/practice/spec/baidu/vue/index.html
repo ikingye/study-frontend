@@ -2981,125 +2981,121 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#vue-">Vue 组件代码规范</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 缩进</a>
           <ul>
-            <li><a href="#21-">2.1 缩进</a>
-              <ul>
-                <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 单行最长限制</a>
-              <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
-              </ul>
-            </li>
-            <li><a href="#23-">2.3 模块书写顺序</a>
-              <ul>
-                <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
-              </ul>
-            </li>
+            <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
           </ul>
         </li>
-        <li><a href="#3-template-">3 template 部分</a>
+        <li><a href="#22-">2.2 单行最长限制</a>
           <ul>
-            <li><a href="#31-">3.1 根节点</a>
-              <ul>
-                <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 标签</a>
-              <ul>
-                <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
-                <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
-                <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
-                <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
-                <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
-                <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
-                <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 属性</a>
-              <ul>
-                <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
-                <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
-                <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
-                <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
-                <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
-                <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
-                <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
-                <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
-                <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
-              </ul>
-            </li>
-            <li><a href="#34-">3.4 指令</a>
-              <ul>
-                <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
-                <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
-                <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-mustache">3.5 插值（Mustache）</a>
-              <ul>
-                <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-">3.6 空格</a>
-              <ul>
-                <li><a href="#--5">[强制] 不能有多余空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#37-">3.7 变量</a>
-              <ul>
-                <li><a href="#--6">[强制] 不能有多余的变量</a></li>
-                <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
-              </ul>
-            </li>
+            <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
           </ul>
         </li>
-        <li><a href="#4-javascript-">4 javascript 部分</a>
+        <li><a href="#23-">2.3 模块书写顺序</a>
           <ul>
-            <li><a href="#41-props">4.1 props</a>
-              <ul>
-                <li><a href="#--props-">[强制] 指定 props 类型</a></li>
-                <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
-                <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
-                <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-data">4.2 data</a>
-              <ul>
-                <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
-                <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
-                <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-">4.3 变量</a>
-              <ul>
-                <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 其它</a>
-              <ul>
-                <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
-              </ul>
-            </li>
+            <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
           </ul>
         </li>
-        <li><a href="#5-style-">5 style 部分</a>
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#6-">6 参考</a></li>
       </ul>
     </li>
+    <li><a href="#3-template-">3 template 部分</a>
+      <ul>
+        <li><a href="#31-">3.1 根节点</a>
+          <ul>
+            <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 标签</a>
+          <ul>
+            <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
+            <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
+            <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
+            <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
+            <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
+            <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
+            <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 属性</a>
+          <ul>
+            <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
+            <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
+            <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
+            <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
+            <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
+            <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
+            <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
+            <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
+            <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 指令</a>
+          <ul>
+            <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
+            <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
+            <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-mustache">3.5 插值（Mustache）</a>
+          <ul>
+            <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-">3.6 空格</a>
+          <ul>
+            <li><a href="#--5">[强制] 不能有多余空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-">3.7 变量</a>
+          <ul>
+            <li><a href="#--6">[强制] 不能有多余的变量</a></li>
+            <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-javascript-">4 javascript 部分</a>
+      <ul>
+        <li><a href="#41-props">4.1 props</a>
+          <ul>
+            <li><a href="#--props-">[强制] 指定 props 类型</a></li>
+            <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
+            <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
+            <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-data">4.2 data</a>
+          <ul>
+            <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
+            <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
+            <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-">4.3 变量</a>
+          <ul>
+            <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 其它</a>
+          <ul>
+            <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-style-">5 style 部分</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-">6 参考</a></li>
   </ul>
 </nav>
 
@@ -3820,125 +3816,121 @@ export default {
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#vue-">Vue 组件代码规范</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 缩进</a>
           <ul>
-            <li><a href="#21-">2.1 缩进</a>
-              <ul>
-                <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 单行最长限制</a>
-              <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
-              </ul>
-            </li>
-            <li><a href="#23-">2.3 模块书写顺序</a>
-              <ul>
-                <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
-              </ul>
-            </li>
+            <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
           </ul>
         </li>
-        <li><a href="#3-template-">3 template 部分</a>
+        <li><a href="#22-">2.2 单行最长限制</a>
           <ul>
-            <li><a href="#31-">3.1 根节点</a>
-              <ul>
-                <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 标签</a>
-              <ul>
-                <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
-                <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
-                <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
-                <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
-                <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
-                <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
-                <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 属性</a>
-              <ul>
-                <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
-                <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
-                <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
-                <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
-                <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
-                <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
-                <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
-                <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
-                <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
-              </ul>
-            </li>
-            <li><a href="#34-">3.4 指令</a>
-              <ul>
-                <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
-                <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
-                <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-mustache">3.5 插值（Mustache）</a>
-              <ul>
-                <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-">3.6 空格</a>
-              <ul>
-                <li><a href="#--5">[强制] 不能有多余空格</a></li>
-              </ul>
-            </li>
-            <li><a href="#37-">3.7 变量</a>
-              <ul>
-                <li><a href="#--6">[强制] 不能有多余的变量</a></li>
-                <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
-              </ul>
-            </li>
+            <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
           </ul>
         </li>
-        <li><a href="#4-javascript-">4 javascript 部分</a>
+        <li><a href="#23-">2.3 模块书写顺序</a>
           <ul>
-            <li><a href="#41-props">4.1 props</a>
-              <ul>
-                <li><a href="#--props-">[强制] 指定 props 类型</a></li>
-                <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
-                <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
-                <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-data">4.2 data</a>
-              <ul>
-                <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
-                <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
-                <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-">4.3 变量</a>
-              <ul>
-                <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 其它</a>
-              <ul>
-                <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
-              </ul>
-            </li>
+            <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
           </ul>
         </li>
-        <li><a href="#5-style-">5 style 部分</a>
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#6-">6 参考</a></li>
       </ul>
     </li>
+    <li><a href="#3-template-">3 template 部分</a>
+      <ul>
+        <li><a href="#31-">3.1 根节点</a>
+          <ul>
+            <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 标签</a>
+          <ul>
+            <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
+            <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
+            <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
+            <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
+            <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
+            <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
+            <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 属性</a>
+          <ul>
+            <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
+            <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
+            <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
+            <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
+            <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
+            <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
+            <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
+            <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
+            <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 指令</a>
+          <ul>
+            <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
+            <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
+            <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-mustache">3.5 插值（Mustache）</a>
+          <ul>
+            <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-">3.6 空格</a>
+          <ul>
+            <li><a href="#--5">[强制] 不能有多余空格</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-">3.7 变量</a>
+          <ul>
+            <li><a href="#--6">[强制] 不能有多余的变量</a></li>
+            <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-javascript-">4 javascript 部分</a>
+      <ul>
+        <li><a href="#41-props">4.1 props</a>
+          <ul>
+            <li><a href="#--props-">[强制] 指定 props 类型</a></li>
+            <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
+            <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
+            <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-data">4.2 data</a>
+          <ul>
+            <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
+            <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
+            <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-">4.3 变量</a>
+          <ul>
+            <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 其它</a>
+          <ul>
+            <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-style-">5 style 部分</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-">6 参考</a></li>
   </ul>
 </nav>
 

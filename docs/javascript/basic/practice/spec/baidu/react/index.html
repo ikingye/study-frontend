@@ -2987,120 +2987,116 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#react-">React 编码规范</a>
+    <li><a href="#1-">1 版本限制</a>
       <ul>
-        <li><a href="#1-">1 版本限制</a>
+        <li><a href="#11-">1.1 法律要求</a>
           <ul>
-            <li><a href="#11-">1.1 法律要求</a>
-              <ul>
-                <li><a href="#--react-1562">[强制] 使用 React >=15.6.2版本</a></li>
-              </ul>
-            </li>
+            <li><a href="#--react-1562">[强制] 使用 React >=15.6.2版本</a></li>
           </ul>
         </li>
-        <li><a href="#2-">2 文件组织</a>
+      </ul>
+    </li>
+    <li><a href="#2-">2 文件组织</a>
+      <ul>
+        <li><a href="#21-">2.1 命名</a>
           <ul>
-            <li><a href="#21-">2.1 命名</a>
-              <ul>
-                <li><a href="#-jsjsx">[强制] 同一目录下不得拥有同名的.js和.jsx文件。</a></li>
-                <li><a href="#-js-jsx">[强制] 组件文件使用一致的.js或 .jsx后缀。</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 模块化</a>
-              <ul>
-                <li><a href="#-export-default">[建议] 实现单个组件的文件以export default的形式暴露一个组件。</a></li>
-                <li><a href="#-indexjs">[建议] 组织多个组件的目录使用一个index.js以命名导出的形式暴露所有组件。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-jsjsx">[强制] 同一目录下不得拥有同名的.js和.jsx文件。</a></li>
+            <li><a href="#-js-jsx">[强制] 组件文件使用一致的.js或 .jsx后缀。</a></li>
           </ul>
         </li>
-        <li><a href="#3-">3 命名规则</a>
+        <li><a href="#22-">2.2 模块化</a>
           <ul>
-            <li><a href="#31-">3.1 组件</a>
-              <ul>
-                <li><a href="#--pascalcase">[强制] 组件名为 PascalCase。</a></li>
-                <li><a href="#-">[强制] 组件名称与文件名称保持相同。</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 属性</a>
-              <ul>
-                <li><a href="#-onxxxprops">[强制] 使用onXxx形式作为props中用于回调的属性名称。</a></li>
-                <li><a href="#-onxxx">[建议] 作为组件方法的事件处理函数以具备业务含义的词作为名称，不使用onXxx形式命名。</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 高阶组件</a>
-              <ul>
-                <li><a href="#--camelcase-">[强制] 高阶组件使用 camelCase 命名。</a></li>
-                <li><a href="#-withxxxxxxable">[建议] 使用withXxx或xxxable形式的词作为高阶组件的名称。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-export-default">[建议] 实现单个组件的文件以export default的形式暴露一个组件。</a></li>
+            <li><a href="#-indexjs">[建议] 组织多个组件的目录使用一个index.js以命名导出的形式暴露所有组件。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 组件声明</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 命名规则</a>
+      <ul>
+        <li><a href="#31-">3.1 组件</a>
           <ul>
-            <li><a href="#41-">4.1 组件</a>
-              <ul>
-                <li><a href="#--es-class-reactcreateclass">[强制] 使用 ES Class 声明组件，禁止使用React.createClass。</a></li>
-                <li><a href="#--1">[强制] 尽量使用无状态函数组件。</a></li>
-                <li><a href="#--react-">[建议] 无需显式引入 React 对象。</a></li>
-                <li><a href="#--2">[建议] 使用箭头函数声明函数组件。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 属性</a>
-              <ul>
-                <li><a href="#-isrequireddefaultprops">[强制] 对于所有非isRequired的属性，在defaultProps中声明对应的值。</a></li>
-                <li><a href="#-propstypescontexttypesdefaultpropsstate">[强制] 如无必要，使用属性语法声明propsTypes、contextTypes、defaultProps和state。</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-">4.3 生命周期</a>
-              <ul>
-                <li><a href="#-componentwillmount">[强制] 禁止使用componentWillMount。</a></li>
-                <li><a href="#--3">[强制] 依照规定顺序编排组件中的方法和属性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 高阶组件</a>
-              <ul>
-                <li><a href="#-displayname">[建议] 高阶组件返回新的组件类型时，添加displayName属性。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--pascalcase">[强制] 组件名为 PascalCase。</a></li>
+            <li><a href="#-">[强制] 组件名称与文件名称保持相同。</a></li>
           </ul>
         </li>
-        <li><a href="#5-">5 组件实现</a>
+        <li><a href="#32-">3.2 属性</a>
           <ul>
-            <li><a href="#51-">5.1 更新机制</a>
-              <ul>
-                <li><a href="#-purecomponentshouldcomponentupdate">[强制] 禁止为继承自PureComponent的组件编写shouldComponentUpdate实现。</a></li>
-              </ul>
-            </li>
-            <li><a href="#52-">5.2 纯函数应用</a>
-              <ul>
-                <li><a href="#-componentwillreceivepropssetstate">[强制] 禁止在componentWillReceiveProps中包含除setState外的副作用。</a></li>
-                <li><a href="#-pure-component">[建议] 除顶层或路由级组件以外，所有组件均在概念上实现为纯组件（Pure Component）。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-onxxxprops">[强制] 使用onXxx形式作为props中用于回调的属性名称。</a></li>
+            <li><a href="#-onxxx">[建议] 作为组件方法的事件处理函数以具备业务含义的词作为名称，不使用onXxx形式命名。</a></li>
           </ul>
         </li>
-        <li><a href="#6-jsx">6 JSX</a>
+        <li><a href="#33-">3.3 高阶组件</a>
           <ul>
-            <li><a href="#61-">6.1 标签</a>
-              <ul>
-                <li><a href="#--4">[强制] 没有子节点的组件使用自闭合语法。</a></li>
-                <li><a href="#--5">[强制] 保持起始和结束标签在同一层缩进。</a></li>
-                <li><a href="#--6">[强制] 自闭合标签的/>前添加一个空格。</a></li>
-              </ul>
-            </li>
-            <li><a href="#62-">6.2 属性</a>
-              <ul>
-                <li><a href="#--7">[强制] 对于多属性需要换行，从第一个属性开始，每个属性一行。</a></li>
-                <li><a href="#--8">[强制] 以字符串字面量作为值的属性使用双引号（"），在其它类型表达式中的字符串使用单引号（'）。</a></li>
-                <li><a href="#-true">[强制] 对于值为true的属性，省去值部分。</a></li>
-                <li><a href="#-true-1">[强制] 值为true的属性放在其它属性前面。</a></li>
-                <li><a href="#-keykey">[强制] 对于需要使用key的场合，提供一个唯一标识作为key属性的值，禁止使用可能会变化的属性（如索引）。</a></li>
-                <li><a href="#--jsx-">[建议] 避免在 JSX 的属性值中直接使用对象和函数表达式。</a></li>
-                <li><a href="#621-">6.2.1 层级</a></li>
-                <li><a href="#--jsx--5-">[建议] 将 JSX 的层级控制在 5 层以内。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--camelcase-">[强制] 高阶组件使用 camelCase 命名。</a></li>
+            <li><a href="#-withxxxxxxable">[建议] 使用withXxx或xxxable形式的词作为高阶组件的名称。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 组件声明</a>
+      <ul>
+        <li><a href="#41-">4.1 组件</a>
+          <ul>
+            <li><a href="#--es-class-reactcreateclass">[强制] 使用 ES Class 声明组件，禁止使用React.createClass。</a></li>
+            <li><a href="#--1">[强制] 尽量使用无状态函数组件。</a></li>
+            <li><a href="#--react-">[建议] 无需显式引入 React 对象。</a></li>
+            <li><a href="#--2">[建议] 使用箭头函数声明函数组件。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 属性</a>
+          <ul>
+            <li><a href="#-isrequireddefaultprops">[强制] 对于所有非isRequired的属性，在defaultProps中声明对应的值。</a></li>
+            <li><a href="#-propstypescontexttypesdefaultpropsstate">[强制] 如无必要，使用属性语法声明propsTypes、contextTypes、defaultProps和state。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-">4.3 生命周期</a>
+          <ul>
+            <li><a href="#-componentwillmount">[强制] 禁止使用componentWillMount。</a></li>
+            <li><a href="#--3">[强制] 依照规定顺序编排组件中的方法和属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 高阶组件</a>
+          <ul>
+            <li><a href="#-displayname">[建议] 高阶组件返回新的组件类型时，添加displayName属性。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-">5 组件实现</a>
+      <ul>
+        <li><a href="#51-">5.1 更新机制</a>
+          <ul>
+            <li><a href="#-purecomponentshouldcomponentupdate">[强制] 禁止为继承自PureComponent的组件编写shouldComponentUpdate实现。</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-">5.2 纯函数应用</a>
+          <ul>
+            <li><a href="#-componentwillreceivepropssetstate">[强制] 禁止在componentWillReceiveProps中包含除setState外的副作用。</a></li>
+            <li><a href="#-pure-component">[建议] 除顶层或路由级组件以外，所有组件均在概念上实现为纯组件（Pure Component）。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-jsx">6 JSX</a>
+      <ul>
+        <li><a href="#61-">6.1 标签</a>
+          <ul>
+            <li><a href="#--4">[强制] 没有子节点的组件使用自闭合语法。</a></li>
+            <li><a href="#--5">[强制] 保持起始和结束标签在同一层缩进。</a></li>
+            <li><a href="#--6">[强制] 自闭合标签的/>前添加一个空格。</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-">6.2 属性</a>
+          <ul>
+            <li><a href="#--7">[强制] 对于多属性需要换行，从第一个属性开始，每个属性一行。</a></li>
+            <li><a href="#--8">[强制] 以字符串字面量作为值的属性使用双引号（"），在其它类型表达式中的字符串使用单引号（'）。</a></li>
+            <li><a href="#-true">[强制] 对于值为true的属性，省去值部分。</a></li>
+            <li><a href="#-true-1">[强制] 值为true的属性放在其它属性前面。</a></li>
+            <li><a href="#-keykey">[强制] 对于需要使用key的场合，提供一个唯一标识作为key属性的值，禁止使用可能会变化的属性（如索引）。</a></li>
+            <li><a href="#--jsx-">[建议] 避免在 JSX 的属性值中直接使用对象和函数表达式。</a></li>
+            <li><a href="#621-">6.2.1 层级</a></li>
+            <li><a href="#--jsx--5-">[建议] 将 JSX 的层级控制在 5 层以内。</a></li>
           </ul>
         </li>
       </ul>
@@ -3564,120 +3560,116 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#react-">React 编码规范</a>
+    <li><a href="#1-">1 版本限制</a>
       <ul>
-        <li><a href="#1-">1 版本限制</a>
+        <li><a href="#11-">1.1 法律要求</a>
           <ul>
-            <li><a href="#11-">1.1 法律要求</a>
-              <ul>
-                <li><a href="#--react-1562">[强制] 使用 React >=15.6.2版本</a></li>
-              </ul>
-            </li>
+            <li><a href="#--react-1562">[强制] 使用 React >=15.6.2版本</a></li>
           </ul>
         </li>
-        <li><a href="#2-">2 文件组织</a>
+      </ul>
+    </li>
+    <li><a href="#2-">2 文件组织</a>
+      <ul>
+        <li><a href="#21-">2.1 命名</a>
           <ul>
-            <li><a href="#21-">2.1 命名</a>
-              <ul>
-                <li><a href="#-jsjsx">[强制] 同一目录下不得拥有同名的.js和.jsx文件。</a></li>
-                <li><a href="#-js-jsx">[强制] 组件文件使用一致的.js或 .jsx后缀。</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 模块化</a>
-              <ul>
-                <li><a href="#-export-default">[建议] 实现单个组件的文件以export default的形式暴露一个组件。</a></li>
-                <li><a href="#-indexjs">[建议] 组织多个组件的目录使用一个index.js以命名导出的形式暴露所有组件。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-jsjsx">[强制] 同一目录下不得拥有同名的.js和.jsx文件。</a></li>
+            <li><a href="#-js-jsx">[强制] 组件文件使用一致的.js或 .jsx后缀。</a></li>
           </ul>
         </li>
-        <li><a href="#3-">3 命名规则</a>
+        <li><a href="#22-">2.2 模块化</a>
           <ul>
-            <li><a href="#31-">3.1 组件</a>
-              <ul>
-                <li><a href="#--pascalcase">[强制] 组件名为 PascalCase。</a></li>
-                <li><a href="#-">[强制] 组件名称与文件名称保持相同。</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 属性</a>
-              <ul>
-                <li><a href="#-onxxxprops">[强制] 使用onXxx形式作为props中用于回调的属性名称。</a></li>
-                <li><a href="#-onxxx">[建议] 作为组件方法的事件处理函数以具备业务含义的词作为名称，不使用onXxx形式命名。</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 高阶组件</a>
-              <ul>
-                <li><a href="#--camelcase-">[强制] 高阶组件使用 camelCase 命名。</a></li>
-                <li><a href="#-withxxxxxxable">[建议] 使用withXxx或xxxable形式的词作为高阶组件的名称。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-export-default">[建议] 实现单个组件的文件以export default的形式暴露一个组件。</a></li>
+            <li><a href="#-indexjs">[建议] 组织多个组件的目录使用一个index.js以命名导出的形式暴露所有组件。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 组件声明</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 命名规则</a>
+      <ul>
+        <li><a href="#31-">3.1 组件</a>
           <ul>
-            <li><a href="#41-">4.1 组件</a>
-              <ul>
-                <li><a href="#--es-class-reactcreateclass">[强制] 使用 ES Class 声明组件，禁止使用React.createClass。</a></li>
-                <li><a href="#--1">[强制] 尽量使用无状态函数组件。</a></li>
-                <li><a href="#--react-">[建议] 无需显式引入 React 对象。</a></li>
-                <li><a href="#--2">[建议] 使用箭头函数声明函数组件。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 属性</a>
-              <ul>
-                <li><a href="#-isrequireddefaultprops">[强制] 对于所有非isRequired的属性，在defaultProps中声明对应的值。</a></li>
-                <li><a href="#-propstypescontexttypesdefaultpropsstate">[强制] 如无必要，使用属性语法声明propsTypes、contextTypes、defaultProps和state。</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-">4.3 生命周期</a>
-              <ul>
-                <li><a href="#-componentwillmount">[强制] 禁止使用componentWillMount。</a></li>
-                <li><a href="#--3">[强制] 依照规定顺序编排组件中的方法和属性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 高阶组件</a>
-              <ul>
-                <li><a href="#-displayname">[建议] 高阶组件返回新的组件类型时，添加displayName属性。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--pascalcase">[强制] 组件名为 PascalCase。</a></li>
+            <li><a href="#-">[强制] 组件名称与文件名称保持相同。</a></li>
           </ul>
         </li>
-        <li><a href="#5-">5 组件实现</a>
+        <li><a href="#32-">3.2 属性</a>
           <ul>
-            <li><a href="#51-">5.1 更新机制</a>
-              <ul>
-                <li><a href="#-purecomponentshouldcomponentupdate">[强制] 禁止为继承自PureComponent的组件编写shouldComponentUpdate实现。</a></li>
-              </ul>
-            </li>
-            <li><a href="#52-">5.2 纯函数应用</a>
-              <ul>
-                <li><a href="#-componentwillreceivepropssetstate">[强制] 禁止在componentWillReceiveProps中包含除setState外的副作用。</a></li>
-                <li><a href="#-pure-component">[建议] 除顶层或路由级组件以外，所有组件均在概念上实现为纯组件（Pure Component）。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-onxxxprops">[强制] 使用onXxx形式作为props中用于回调的属性名称。</a></li>
+            <li><a href="#-onxxx">[建议] 作为组件方法的事件处理函数以具备业务含义的词作为名称，不使用onXxx形式命名。</a></li>
           </ul>
         </li>
-        <li><a href="#6-jsx">6 JSX</a>
+        <li><a href="#33-">3.3 高阶组件</a>
           <ul>
-            <li><a href="#61-">6.1 标签</a>
-              <ul>
-                <li><a href="#--4">[强制] 没有子节点的组件使用自闭合语法。</a></li>
-                <li><a href="#--5">[强制] 保持起始和结束标签在同一层缩进。</a></li>
-                <li><a href="#--6">[强制] 自闭合标签的/>前添加一个空格。</a></li>
-              </ul>
-            </li>
-            <li><a href="#62-">6.2 属性</a>
-              <ul>
-                <li><a href="#--7">[强制] 对于多属性需要换行，从第一个属性开始，每个属性一行。</a></li>
-                <li><a href="#--8">[强制] 以字符串字面量作为值的属性使用双引号（"），在其它类型表达式中的字符串使用单引号（'）。</a></li>
-                <li><a href="#-true">[强制] 对于值为true的属性，省去值部分。</a></li>
-                <li><a href="#-true-1">[强制] 值为true的属性放在其它属性前面。</a></li>
-                <li><a href="#-keykey">[强制] 对于需要使用key的场合，提供一个唯一标识作为key属性的值，禁止使用可能会变化的属性（如索引）。</a></li>
-                <li><a href="#--jsx-">[建议] 避免在 JSX 的属性值中直接使用对象和函数表达式。</a></li>
-                <li><a href="#621-">6.2.1 层级</a></li>
-                <li><a href="#--jsx--5-">[建议] 将 JSX 的层级控制在 5 层以内。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--camelcase-">[强制] 高阶组件使用 camelCase 命名。</a></li>
+            <li><a href="#-withxxxxxxable">[建议] 使用withXxx或xxxable形式的词作为高阶组件的名称。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 组件声明</a>
+      <ul>
+        <li><a href="#41-">4.1 组件</a>
+          <ul>
+            <li><a href="#--es-class-reactcreateclass">[强制] 使用 ES Class 声明组件，禁止使用React.createClass。</a></li>
+            <li><a href="#--1">[强制] 尽量使用无状态函数组件。</a></li>
+            <li><a href="#--react-">[建议] 无需显式引入 React 对象。</a></li>
+            <li><a href="#--2">[建议] 使用箭头函数声明函数组件。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 属性</a>
+          <ul>
+            <li><a href="#-isrequireddefaultprops">[强制] 对于所有非isRequired的属性，在defaultProps中声明对应的值。</a></li>
+            <li><a href="#-propstypescontexttypesdefaultpropsstate">[强制] 如无必要，使用属性语法声明propsTypes、contextTypes、defaultProps和state。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-">4.3 生命周期</a>
+          <ul>
+            <li><a href="#-componentwillmount">[强制] 禁止使用componentWillMount。</a></li>
+            <li><a href="#--3">[强制] 依照规定顺序编排组件中的方法和属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 高阶组件</a>
+          <ul>
+            <li><a href="#-displayname">[建议] 高阶组件返回新的组件类型时，添加displayName属性。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-">5 组件实现</a>
+      <ul>
+        <li><a href="#51-">5.1 更新机制</a>
+          <ul>
+            <li><a href="#-purecomponentshouldcomponentupdate">[强制] 禁止为继承自PureComponent的组件编写shouldComponentUpdate实现。</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-">5.2 纯函数应用</a>
+          <ul>
+            <li><a href="#-componentwillreceivepropssetstate">[强制] 禁止在componentWillReceiveProps中包含除setState外的副作用。</a></li>
+            <li><a href="#-pure-component">[建议] 除顶层或路由级组件以外，所有组件均在概念上实现为纯组件（Pure Component）。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-jsx">6 JSX</a>
+      <ul>
+        <li><a href="#61-">6.1 标签</a>
+          <ul>
+            <li><a href="#--4">[强制] 没有子节点的组件使用自闭合语法。</a></li>
+            <li><a href="#--5">[强制] 保持起始和结束标签在同一层缩进。</a></li>
+            <li><a href="#--6">[强制] 自闭合标签的/>前添加一个空格。</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-">6.2 属性</a>
+          <ul>
+            <li><a href="#--7">[强制] 对于多属性需要换行，从第一个属性开始，每个属性一行。</a></li>
+            <li><a href="#--8">[强制] 以字符串字面量作为值的属性使用双引号（"），在其它类型表达式中的字符串使用单引号（'）。</a></li>
+            <li><a href="#-true">[强制] 对于值为true的属性，省去值部分。</a></li>
+            <li><a href="#-true-1">[强制] 值为true的属性放在其它属性前面。</a></li>
+            <li><a href="#-keykey">[强制] 对于需要使用key的场合，提供一个唯一标识作为key属性的值，禁止使用可能会变化的属性（如索引）。</a></li>
+            <li><a href="#--jsx-">[建议] 避免在 JSX 的属性值中直接使用对象和函数表达式。</a></li>
+            <li><a href="#621-">6.2.1 层级</a></li>
+            <li><a href="#--jsx--5-">[建议] 将 JSX 的层级控制在 5 层以内。</a></li>
           </ul>
         </li>
       </ul>

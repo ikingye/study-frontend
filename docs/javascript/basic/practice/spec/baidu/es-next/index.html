@@ -2985,143 +2985,139 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#javascript----esnext-">JavaScript 编码规范 - ESNext 补充篇（草案）</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 文件</a>
           <ul>
-            <li><a href="#21-">2.1 文件</a>
+            <li>
               <ul>
-                <li>
-                  <ul>
-                    <li><a href="#-esnext--javascript--js-">[建议] ESNext 语法的 JavaScript 文件使用 .js 扩展名。</a></li>
-                    <li><a href="#--js--es-">[强制] 当文件无法使用 .js 扩展名时，使用 .es 扩展名。</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 结构</a>
-              <ul>
-                <li><a href="#221-">2.2.1 缩进</a>
-                  <ul>
-                    <li><a href="#-">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#222-">2.2.2 空格</a>
-                  <ul>
-                    <li><a href="#--generator---">[强制] 使用 generator 时，* 前面不允许有空格，* 后面必须有一个空格。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#223-">2.2.3 语句</a>
-                  <ul>
-                    <li><a href="#--1">[强制] 类声明结束不允许添加分号。</a></li>
-                    <li><a href="#--2">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
-                    <li><a href="#-export-">[强制] export 语句后，不允许出现表示空语句的分号。</a></li>
-                    <li><a href="#--3">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
-                    <li><a href="#--4">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
-                    <li><a href="#--">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 `</a></li>
-                    <li><a href="#--object-literal--">[建议] 箭头函数的函数体只有一个 Object Literal，且作为返回值时，使用 () 包裹。</a></li>
-                    <li><a href="#--5">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#-importexport">[强制] 对于对象初始化、数组初始化、import及export语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
+                <li><a href="#-esnext--javascript--js-">[建议] ESNext 语法的 JavaScript 文件使用 .js 扩展名。</a></li>
+                <li><a href="#--js--es-">[强制] 当文件无法使用 .js 扩展名时，使用 .es 扩展名。</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#3-">3 语言特性</a>
+        <li><a href="#22-">2.2 结构</a>
           <ul>
-            <li><a href="#31-">3.1 变量</a>
+            <li><a href="#221-">2.2.1 缩进</a>
               <ul>
-                <li><a href="#--let--const--var">[强制] 使用 let 和 const 定义变量，不使用 var。</a></li>
+                <li><a href="#-">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
               </ul>
             </li>
-            <li><a href="#32-">3.2 解构</a>
+            <li><a href="#222-">2.2.2 空格</a>
               <ul>
-                <li><a href="#--3-">[强制] 不要使用 3 层及以上的解构。</a></li>
-                <li><a href="#--6">[建议] 使用解构减少中间变量。</a></li>
-                <li><a href="#----objectliteral--arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 = 号右边不允许是 ObjectLiteral 和 ArrayLiteral。</a></li>
-                <li><a href="#--7">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+                <li><a href="#--generator---">[强制] 使用 generator 时，* 前面不允许有空格，* 后面必须有一个空格。</a></li>
               </ul>
             </li>
-            <li><a href="#33-">3.3 模板字符串</a>
+            <li><a href="#223-">2.2.3 语句</a>
               <ul>
-                <li><a href="#--2-">[强制] 字符串内变量替换时，不要使用 2 次及以上的函数调用。</a></li>
+                <li><a href="#--1">[强制] 类声明结束不允许添加分号。</a></li>
+                <li><a href="#--2">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
+                <li><a href="#-export-">[强制] export 语句后，不允许出现表示空语句的分号。</a></li>
+                <li><a href="#--3">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
+                <li><a href="#--4">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
+                <li><a href="#--">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 `</a></li>
+                <li><a href="#--object-literal--">[建议] 箭头函数的函数体只有一个 Object Literal，且作为返回值时，使用 () 包裹。</a></li>
+                <li><a href="#--5">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
               </ul>
             </li>
-            <li><a href="#34-">3.4 函数</a>
-              <ul>
-                <li><a href="#--8">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
-                <li><a href="#--arguments--args-">[强制] 不要使用 arguments 对象，应使用 ...args 代替。</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-">3.5 箭头函数</a>
-              <ul>
-                <li><a href="#--call--apply-">[强制] 一个函数被设计为需要 call 和 apply 的时候，不能是箭头函数。</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-">3.6 对象</a>
-              <ul>
-                <li><a href="#--methoddefinition--propertyname-functionexpression-">[强制] 定义方法时使用 MethodDefinition 语法，不使用 PropertyName: FunctionExpression 语法。</a></li>
-                <li><a href="#--objectkeys--objectentries-">[建议] 使用 Object.keys 或 Object.entries 进行对象遍历。</a></li>
-                <li><a href="#--9">[建议] 定义对象的方法不应使用箭头函数。</a></li>
-                <li><a href="#--10">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#37-">3.7 类</a>
-              <ul>
-                <li><a href="#--class-">[强制] 使用 class 关键字定义一个类。</a></li>
-                <li><a href="#--super--prototype">[强制] 使用 super 访问父类成员，而非父类的 prototype。</a></li>
-              </ul>
-            </li>
-            <li><a href="#38-">3.8 模块</a>
-              <ul>
-                <li><a href="#--11">[建议] 相互之间无关联的内容使用命名导出。</a></li>
-                <li><a href="#--import-">[强制] 所有 import 语句写在模块开始处。</a></li>
-              </ul>
-            </li>
-            <li><a href="#39-">3.9 集合</a>
-              <ul>
-                <li><a href="#--12">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
-                <li><a href="#--13">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
-                <li><a href="#--for--of-">[建议] 尽可能使用 for .. of 进行遍历。</a></li>
-                <li><a href="#--map-set">[强制] 当键值有可能不是字符串时，必须使用 Map；当元素有可能不是字符串时，必须使用 Set。</a></li>
-                <li><a href="#--set">[建议] 需要一个不可重复的集合时，应使用 Set。</a></li>
-                <li><a href="#--map--set">[建议] 当需要遍历功能时，使用 Map 和 Set。</a></li>
-                <li><a href="#--map--set-1">[建议] 程序运行过程中有添加或移除元素的操作时，使用 Map 和 Set。</a></li>
-              </ul>
-            </li>
-            <li><a href="#310-">3.10 异步</a>
-              <ul>
-                <li><a href="#--3--1">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
-                <li><a href="#--promise--callback">[建议] 使用 Promise 代替 callback。</a></li>
-                <li><a href="#--promise-api">[强制] 使用标准的 Promise API。</a></li>
-                <li><a href="#--promise--prototype">[强制] 不允许直接扩展 Promise 对象的 prototype。</a></li>
-                <li><a href="#--io-">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
-                <li><a href="#--asyncawait--generator--co">[建议] 使用 async/await 代替 generator + co。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-importexport">[强制] 对于对象初始化、数组初始化、import及export语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 环境</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 语言特性</a>
+      <ul>
+        <li><a href="#31-">3.1 变量</a>
           <ul>
-            <li><a href="#41-">4.1 运行环境</a>
-              <ul>
-                <li><a href="#--14">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
-                <li><a href="#--promise--promise--shim--global-">[强制] 在运行环境中没有 Promise 时，将 Promise 的实现 shim 到 global 中。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 预编译</a>
-              <ul>
-                <li><a href="#--babel--5x-">[建议] 使用 babel 做为预编译工具时，建议使用 5.x 版本。</a></li>
-                <li><a href="#--babel--external-helpers-">[建议] 使用 babel 做为预编译工具时，通过 external-helpers 减少生成文件的大小。</a></li>
-                <li><a href="#--typescript--16-">[建议] 使用 TypeScript 做为预编译工具时，建议使用 1.6+ 版本。</a></li>
-                <li><a href="#--typescript--tsc-">[建议] 使用 TypeScript 做为预编译工具时，不使用 tsc 命令。</a></li>
-                <li><a href="#--amd-">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
-                <li><a href="#--esnext--es35--typescript-">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 TypeScript 做为预编译工具。</a></li>
-                <li><a href="#-amdcommonjs--esnext-amdcommonjs--default-export--require-">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--let--const--var">[强制] 使用 let 和 const 定义变量，不使用 var。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 解构</a>
+          <ul>
+            <li><a href="#--3-">[强制] 不要使用 3 层及以上的解构。</a></li>
+            <li><a href="#--6">[建议] 使用解构减少中间变量。</a></li>
+            <li><a href="#----objectliteral--arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 = 号右边不允许是 ObjectLiteral 和 ArrayLiteral。</a></li>
+            <li><a href="#--7">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 模板字符串</a>
+          <ul>
+            <li><a href="#--2-">[强制] 字符串内变量替换时，不要使用 2 次及以上的函数调用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 函数</a>
+          <ul>
+            <li><a href="#--8">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
+            <li><a href="#--arguments--args-">[强制] 不要使用 arguments 对象，应使用 ...args 代替。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-">3.5 箭头函数</a>
+          <ul>
+            <li><a href="#--call--apply-">[强制] 一个函数被设计为需要 call 和 apply 的时候，不能是箭头函数。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-">3.6 对象</a>
+          <ul>
+            <li><a href="#--methoddefinition--propertyname-functionexpression-">[强制] 定义方法时使用 MethodDefinition 语法，不使用 PropertyName: FunctionExpression 语法。</a></li>
+            <li><a href="#--objectkeys--objectentries-">[建议] 使用 Object.keys 或 Object.entries 进行对象遍历。</a></li>
+            <li><a href="#--9">[建议] 定义对象的方法不应使用箭头函数。</a></li>
+            <li><a href="#--10">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-">3.7 类</a>
+          <ul>
+            <li><a href="#--class-">[强制] 使用 class 关键字定义一个类。</a></li>
+            <li><a href="#--super--prototype">[强制] 使用 super 访问父类成员，而非父类的 prototype。</a></li>
+          </ul>
+        </li>
+        <li><a href="#38-">3.8 模块</a>
+          <ul>
+            <li><a href="#--11">[建议] 相互之间无关联的内容使用命名导出。</a></li>
+            <li><a href="#--import-">[强制] 所有 import 语句写在模块开始处。</a></li>
+          </ul>
+        </li>
+        <li><a href="#39-">3.9 集合</a>
+          <ul>
+            <li><a href="#--12">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
+            <li><a href="#--13">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
+            <li><a href="#--for--of-">[建议] 尽可能使用 for .. of 进行遍历。</a></li>
+            <li><a href="#--map-set">[强制] 当键值有可能不是字符串时，必须使用 Map；当元素有可能不是字符串时，必须使用 Set。</a></li>
+            <li><a href="#--set">[建议] 需要一个不可重复的集合时，应使用 Set。</a></li>
+            <li><a href="#--map--set">[建议] 当需要遍历功能时，使用 Map 和 Set。</a></li>
+            <li><a href="#--map--set-1">[建议] 程序运行过程中有添加或移除元素的操作时，使用 Map 和 Set。</a></li>
+          </ul>
+        </li>
+        <li><a href="#310-">3.10 异步</a>
+          <ul>
+            <li><a href="#--3--1">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
+            <li><a href="#--promise--callback">[建议] 使用 Promise 代替 callback。</a></li>
+            <li><a href="#--promise-api">[强制] 使用标准的 Promise API。</a></li>
+            <li><a href="#--promise--prototype">[强制] 不允许直接扩展 Promise 对象的 prototype。</a></li>
+            <li><a href="#--io-">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
+            <li><a href="#--asyncawait--generator--co">[建议] 使用 async/await 代替 generator + co。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 环境</a>
+      <ul>
+        <li><a href="#41-">4.1 运行环境</a>
+          <ul>
+            <li><a href="#--14">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
+            <li><a href="#--promise--promise--shim--global-">[强制] 在运行环境中没有 Promise 时，将 Promise 的实现 shim 到 global 中。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 预编译</a>
+          <ul>
+            <li><a href="#--babel--5x-">[建议] 使用 babel 做为预编译工具时，建议使用 5.x 版本。</a></li>
+            <li><a href="#--babel--external-helpers-">[建议] 使用 babel 做为预编译工具时，通过 external-helpers 减少生成文件的大小。</a></li>
+            <li><a href="#--typescript--16-">[建议] 使用 TypeScript 做为预编译工具时，建议使用 1.6+ 版本。</a></li>
+            <li><a href="#--typescript--tsc-">[建议] 使用 TypeScript 做为预编译工具时，不使用 tsc 命令。</a></li>
+            <li><a href="#--amd-">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
+            <li><a href="#--esnext--es35--typescript-">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 TypeScript 做为预编译工具。</a></li>
+            <li><a href="#-amdcommonjs--esnext-amdcommonjs--default-export--require-">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
           </ul>
         </li>
       </ul>
@@ -3910,143 +3906,139 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#javascript----esnext-">JavaScript 编码规范 - ESNext 补充篇（草案）</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 文件</a>
           <ul>
-            <li><a href="#21-">2.1 文件</a>
+            <li>
               <ul>
-                <li>
-                  <ul>
-                    <li><a href="#-esnext--javascript--js-">[建议] ESNext 语法的 JavaScript 文件使用 .js 扩展名。</a></li>
-                    <li><a href="#--js--es-">[强制] 当文件无法使用 .js 扩展名时，使用 .es 扩展名。</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 结构</a>
-              <ul>
-                <li><a href="#221-">2.2.1 缩进</a>
-                  <ul>
-                    <li><a href="#-">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#222-">2.2.2 空格</a>
-                  <ul>
-                    <li><a href="#--generator---">[强制] 使用 generator 时，* 前面不允许有空格，* 后面必须有一个空格。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#223-">2.2.3 语句</a>
-                  <ul>
-                    <li><a href="#--1">[强制] 类声明结束不允许添加分号。</a></li>
-                    <li><a href="#--2">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
-                    <li><a href="#-export-">[强制] export 语句后，不允许出现表示空语句的分号。</a></li>
-                    <li><a href="#--3">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
-                    <li><a href="#--4">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
-                    <li><a href="#--">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 `</a></li>
-                    <li><a href="#--object-literal--">[建议] 箭头函数的函数体只有一个 Object Literal，且作为返回值时，使用 () 包裹。</a></li>
-                    <li><a href="#--5">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
-                  </ul>
-                </li>
-                <li><a href="#-importexport">[强制] 对于对象初始化、数组初始化、import及export语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
+                <li><a href="#-esnext--javascript--js-">[建议] ESNext 语法的 JavaScript 文件使用 .js 扩展名。</a></li>
+                <li><a href="#--js--es-">[强制] 当文件无法使用 .js 扩展名时，使用 .es 扩展名。</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#3-">3 语言特性</a>
+        <li><a href="#22-">2.2 结构</a>
           <ul>
-            <li><a href="#31-">3.1 变量</a>
+            <li><a href="#221-">2.2.1 缩进</a>
               <ul>
-                <li><a href="#--let--const--var">[强制] 使用 let 和 const 定义变量，不使用 var。</a></li>
+                <li><a href="#-">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
               </ul>
             </li>
-            <li><a href="#32-">3.2 解构</a>
+            <li><a href="#222-">2.2.2 空格</a>
               <ul>
-                <li><a href="#--3-">[强制] 不要使用 3 层及以上的解构。</a></li>
-                <li><a href="#--6">[建议] 使用解构减少中间变量。</a></li>
-                <li><a href="#----objectliteral--arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 = 号右边不允许是 ObjectLiteral 和 ArrayLiteral。</a></li>
-                <li><a href="#--7">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+                <li><a href="#--generator---">[强制] 使用 generator 时，* 前面不允许有空格，* 后面必须有一个空格。</a></li>
               </ul>
             </li>
-            <li><a href="#33-">3.3 模板字符串</a>
+            <li><a href="#223-">2.2.3 语句</a>
               <ul>
-                <li><a href="#--2-">[强制] 字符串内变量替换时，不要使用 2 次及以上的函数调用。</a></li>
+                <li><a href="#--1">[强制] 类声明结束不允许添加分号。</a></li>
+                <li><a href="#--2">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
+                <li><a href="#-export-">[强制] export 语句后，不允许出现表示空语句的分号。</a></li>
+                <li><a href="#--3">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
+                <li><a href="#--4">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
+                <li><a href="#--">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 `</a></li>
+                <li><a href="#--object-literal--">[建议] 箭头函数的函数体只有一个 Object Literal，且作为返回值时，使用 () 包裹。</a></li>
+                <li><a href="#--5">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
               </ul>
             </li>
-            <li><a href="#34-">3.4 函数</a>
-              <ul>
-                <li><a href="#--8">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
-                <li><a href="#--arguments--args-">[强制] 不要使用 arguments 对象，应使用 ...args 代替。</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-">3.5 箭头函数</a>
-              <ul>
-                <li><a href="#--call--apply-">[强制] 一个函数被设计为需要 call 和 apply 的时候，不能是箭头函数。</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-">3.6 对象</a>
-              <ul>
-                <li><a href="#--methoddefinition--propertyname-functionexpression-">[强制] 定义方法时使用 MethodDefinition 语法，不使用 PropertyName: FunctionExpression 语法。</a></li>
-                <li><a href="#--objectkeys--objectentries-">[建议] 使用 Object.keys 或 Object.entries 进行对象遍历。</a></li>
-                <li><a href="#--9">[建议] 定义对象的方法不应使用箭头函数。</a></li>
-                <li><a href="#--10">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#37-">3.7 类</a>
-              <ul>
-                <li><a href="#--class-">[强制] 使用 class 关键字定义一个类。</a></li>
-                <li><a href="#--super--prototype">[强制] 使用 super 访问父类成员，而非父类的 prototype。</a></li>
-              </ul>
-            </li>
-            <li><a href="#38-">3.8 模块</a>
-              <ul>
-                <li><a href="#--11">[建议] 相互之间无关联的内容使用命名导出。</a></li>
-                <li><a href="#--import-">[强制] 所有 import 语句写在模块开始处。</a></li>
-              </ul>
-            </li>
-            <li><a href="#39-">3.9 集合</a>
-              <ul>
-                <li><a href="#--12">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
-                <li><a href="#--13">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
-                <li><a href="#--for--of-">[建议] 尽可能使用 for .. of 进行遍历。</a></li>
-                <li><a href="#--map-set">[强制] 当键值有可能不是字符串时，必须使用 Map；当元素有可能不是字符串时，必须使用 Set。</a></li>
-                <li><a href="#--set">[建议] 需要一个不可重复的集合时，应使用 Set。</a></li>
-                <li><a href="#--map--set">[建议] 当需要遍历功能时，使用 Map 和 Set。</a></li>
-                <li><a href="#--map--set-1">[建议] 程序运行过程中有添加或移除元素的操作时，使用 Map 和 Set。</a></li>
-              </ul>
-            </li>
-            <li><a href="#310-">3.10 异步</a>
-              <ul>
-                <li><a href="#--3--1">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
-                <li><a href="#--promise--callback">[建议] 使用 Promise 代替 callback。</a></li>
-                <li><a href="#--promise-api">[强制] 使用标准的 Promise API。</a></li>
-                <li><a href="#--promise--prototype">[强制] 不允许直接扩展 Promise 对象的 prototype。</a></li>
-                <li><a href="#--io-">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
-                <li><a href="#--asyncawait--generator--co">[建议] 使用 async/await 代替 generator + co。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-importexport">[强制] 对于对象初始化、数组初始化、import及export语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 环境</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 语言特性</a>
+      <ul>
+        <li><a href="#31-">3.1 变量</a>
           <ul>
-            <li><a href="#41-">4.1 运行环境</a>
-              <ul>
-                <li><a href="#--14">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
-                <li><a href="#--promise--promise--shim--global-">[强制] 在运行环境中没有 Promise 时，将 Promise 的实现 shim 到 global 中。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 预编译</a>
-              <ul>
-                <li><a href="#--babel--5x-">[建议] 使用 babel 做为预编译工具时，建议使用 5.x 版本。</a></li>
-                <li><a href="#--babel--external-helpers-">[建议] 使用 babel 做为预编译工具时，通过 external-helpers 减少生成文件的大小。</a></li>
-                <li><a href="#--typescript--16-">[建议] 使用 TypeScript 做为预编译工具时，建议使用 1.6+ 版本。</a></li>
-                <li><a href="#--typescript--tsc-">[建议] 使用 TypeScript 做为预编译工具时，不使用 tsc 命令。</a></li>
-                <li><a href="#--amd-">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
-                <li><a href="#--esnext--es35--typescript-">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 TypeScript 做为预编译工具。</a></li>
-                <li><a href="#-amdcommonjs--esnext-amdcommonjs--default-export--require-">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--let--const--var">[强制] 使用 let 和 const 定义变量，不使用 var。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 解构</a>
+          <ul>
+            <li><a href="#--3-">[强制] 不要使用 3 层及以上的解构。</a></li>
+            <li><a href="#--6">[建议] 使用解构减少中间变量。</a></li>
+            <li><a href="#----objectliteral--arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 = 号右边不允许是 ObjectLiteral 和 ArrayLiteral。</a></li>
+            <li><a href="#--7">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 模板字符串</a>
+          <ul>
+            <li><a href="#--2-">[强制] 字符串内变量替换时，不要使用 2 次及以上的函数调用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 函数</a>
+          <ul>
+            <li><a href="#--8">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
+            <li><a href="#--arguments--args-">[强制] 不要使用 arguments 对象，应使用 ...args 代替。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-">3.5 箭头函数</a>
+          <ul>
+            <li><a href="#--call--apply-">[强制] 一个函数被设计为需要 call 和 apply 的时候，不能是箭头函数。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-">3.6 对象</a>
+          <ul>
+            <li><a href="#--methoddefinition--propertyname-functionexpression-">[强制] 定义方法时使用 MethodDefinition 语法，不使用 PropertyName: FunctionExpression 语法。</a></li>
+            <li><a href="#--objectkeys--objectentries-">[建议] 使用 Object.keys 或 Object.entries 进行对象遍历。</a></li>
+            <li><a href="#--9">[建议] 定义对象的方法不应使用箭头函数。</a></li>
+            <li><a href="#--10">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-">3.7 类</a>
+          <ul>
+            <li><a href="#--class-">[强制] 使用 class 关键字定义一个类。</a></li>
+            <li><a href="#--super--prototype">[强制] 使用 super 访问父类成员，而非父类的 prototype。</a></li>
+          </ul>
+        </li>
+        <li><a href="#38-">3.8 模块</a>
+          <ul>
+            <li><a href="#--11">[建议] 相互之间无关联的内容使用命名导出。</a></li>
+            <li><a href="#--import-">[强制] 所有 import 语句写在模块开始处。</a></li>
+          </ul>
+        </li>
+        <li><a href="#39-">3.9 集合</a>
+          <ul>
+            <li><a href="#--12">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
+            <li><a href="#--13">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
+            <li><a href="#--for--of-">[建议] 尽可能使用 for .. of 进行遍历。</a></li>
+            <li><a href="#--map-set">[强制] 当键值有可能不是字符串时，必须使用 Map；当元素有可能不是字符串时，必须使用 Set。</a></li>
+            <li><a href="#--set">[建议] 需要一个不可重复的集合时，应使用 Set。</a></li>
+            <li><a href="#--map--set">[建议] 当需要遍历功能时，使用 Map 和 Set。</a></li>
+            <li><a href="#--map--set-1">[建议] 程序运行过程中有添加或移除元素的操作时，使用 Map 和 Set。</a></li>
+          </ul>
+        </li>
+        <li><a href="#310-">3.10 异步</a>
+          <ul>
+            <li><a href="#--3--1">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
+            <li><a href="#--promise--callback">[建议] 使用 Promise 代替 callback。</a></li>
+            <li><a href="#--promise-api">[强制] 使用标准的 Promise API。</a></li>
+            <li><a href="#--promise--prototype">[强制] 不允许直接扩展 Promise 对象的 prototype。</a></li>
+            <li><a href="#--io-">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
+            <li><a href="#--asyncawait--generator--co">[建议] 使用 async/await 代替 generator + co。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 环境</a>
+      <ul>
+        <li><a href="#41-">4.1 运行环境</a>
+          <ul>
+            <li><a href="#--14">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
+            <li><a href="#--promise--promise--shim--global-">[强制] 在运行环境中没有 Promise 时，将 Promise 的实现 shim 到 global 中。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 预编译</a>
+          <ul>
+            <li><a href="#--babel--5x-">[建议] 使用 babel 做为预编译工具时，建议使用 5.x 版本。</a></li>
+            <li><a href="#--babel--external-helpers-">[建议] 使用 babel 做为预编译工具时，通过 external-helpers 减少生成文件的大小。</a></li>
+            <li><a href="#--typescript--16-">[建议] 使用 TypeScript 做为预编译工具时，建议使用 1.6+ 版本。</a></li>
+            <li><a href="#--typescript--tsc-">[建议] 使用 TypeScript 做为预编译工具时，不使用 tsc 命令。</a></li>
+            <li><a href="#--amd-">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
+            <li><a href="#--esnext--es35--typescript-">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 TypeScript 做为预编译工具。</a></li>
+            <li><a href="#-amdcommonjs--esnext-amdcommonjs--default-export--require-">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
           </ul>
         </li>
       </ul>

@@ -2993,197 +2993,193 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#css-">CSS 编码规范</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 文件</a>
           <ul>
-            <li><a href="#21-">2.1 文件</a>
-              <ul>
-                <li><a href="#-css--bom--utf-8-">[建议] CSS 文件使用无 BOM 的 UTF-8 编码。</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 缩进</a>
-              <ul>
-                <li><a href="#--4--2---tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。</a></li>
-              </ul>
-            </li>
-            <li><a href="#23-">2.3 空格</a>
-              <ul>
-                <li><a href="#----">[强制] 选择器 与 { 之间必须包含空格。</a></li>
-                <li><a href="#--------">[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。</a></li>
-                <li><a href="#---">[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。</a></li>
-              </ul>
-            </li>
-            <li><a href="#24-">2.4 行长度</a>
-              <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符，除非单行不可分割。</a></li>
-                <li><a href="#-----">[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。</a></li>
-              </ul>
-            </li>
-            <li><a href="#25-">2.5 选择器</a>
-              <ul>
-                <li><a href="#--rule--selector-">[强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</a></li>
-                <li><a href="#--">[强制] >、+、~ 选择器的两边各保留一个空格。</a></li>
-                <li><a href="#-">[强制] 属性选择器中的值必须用双引号包围。</a></li>
-              </ul>
-            </li>
-            <li><a href="#26-">2.6 属性</a>
-              <ul>
-                <li><a href="#--1">[强制] 属性定义必须另起一行。</a></li>
-                <li><a href="#--2">[强制] 属性定义后必须以分号结尾。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-css--bom--utf-8-">[建议] CSS 文件使用无 BOM 的 UTF-8 编码。</a></li>
           </ul>
         </li>
-        <li><a href="#3-">3 通用</a>
+        <li><a href="#22-">2.2 缩进</a>
           <ul>
-            <li><a href="#31-">3.1 选择器</a>
-              <ul>
-                <li><a href="#--idclass-">[强制] 如无必要，不得为 id、class 选择器添加类型选择器进行限定。</a></li>
-                <li><a href="#--3-">[建议] 选择器的嵌套层级应不大于 3 级，位置靠后的限定条件应尽可能精确。</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 属性缩写</a>
-              <ul>
-                <li><a href="#--3">[建议] 在可以使用缩写的情况下，尽量使用属性缩写。</a></li>
-                <li><a href="#--border--margin--padding-">[建议] 使用 border / margin / padding 等缩写时，应注意隐含值对实际数值的影响，确实需要设置多个方向的值时才使用缩写。</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 属性书写顺序</a>
-              <ul>
-                <li><a href="#--rule-set--formatting-model--box-model--typographic--visual-">[建议] 同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#34-">3.4 清除浮动</a>
-              <ul>
-                <li><a href="#--clear--bfc--clearfix">[建议] 当元素需要撑起高度以包含内部的浮动元素时，通过对伪类设置 clear 或触发 BFC 的方式进行 clearfix。尽量不使用增加空标签的方式。</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-important">3.5 !important</a>
-              <ul>
-                <li><a href="#--important-">[建议] 尽量不使用 !important 声明。</a></li>
-                <li><a href="#--important--1">[建议] 当需要强制指定样式且不允许任何场景覆盖时，通过标签内联和 !important 定义样式。</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-z-index">3.6 z-index</a>
-              <ul>
-                <li><a href="#--z-index-">[建议] 将 z-index 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。</a></li>
-                <li><a href="#-z-index--999999">[建议] 在可控环境下，期望显示在最上层的元素，z-index 指定为 999999。</a></li>
-                <li><a href="#--important-z-index--2147483647">[建议] 在第三方环境下，期望显示在最上层的元素，通过标签内联和 !important，将 z-index 指定为 2147483647。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--4--2---tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 值与单位</a>
+        <li><a href="#23-">2.3 空格</a>
           <ul>
-            <li><a href="#41-">4.1 文本</a>
-              <ul>
-                <li><a href="#--4">[强制] 文本内容必须用双引号包围。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 数值</a>
-              <ul>
-                <li><a href="#--0---1--0">[强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 0。</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-url">4.3 url()</a>
-              <ul>
-                <li><a href="#-url-">[强制] url() 函数中的路径不加引号。</a></li>
-                <li><a href="#-url--1">[建议] url() 函数中的绝对路径可省去协议名。</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 长度</a>
-              <ul>
-                <li><a href="#--0--">[强制] 长度为 0 时须省略单位。 (也只有长度单位可省)</a></li>
-              </ul>
-            </li>
-            <li><a href="#45-">4.5 颜色</a>
-              <ul>
-                <li><a href="#-rgb--rrggbb-rgb">[强制] RGB 颜色值必须使用十六进制记号形式 #rrggbb。不允许使用 rgb()。</a></li>
-                <li><a href="#--5">[强制] 颜色值可以缩写时，必须使用缩写形式。</a></li>
-                <li><a href="#--6">[强制] 颜色值不允许使用命名色值。</a></li>
-                <li><a href="#--7">[建议] 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。</a></li>
-              </ul>
-            </li>
-            <li><a href="#46-2d-">4.6 2D 位置</a>
-              <ul>
-                <li><a href="#--8">[强制] 必须同时给出水平和垂直方向的位置。</a></li>
-              </ul>
-            </li>
+            <li><a href="#----">[强制] 选择器 与 { 之间必须包含空格。</a></li>
+            <li><a href="#--------">[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。</a></li>
+            <li><a href="#---">[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。</a></li>
           </ul>
         </li>
-        <li><a href="#5-">5 文本编排</a>
+        <li><a href="#24-">2.4 行长度</a>
           <ul>
-            <li><a href="#51-">5.1 字体族</a>
-              <ul>
-                <li><a href="#-font-family--family-name">[强制] font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</a></li>
-                <li><a href="#-font-family----serif--sans-serif-">[强制] font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )。</a></li>
-                <li><a href="#-font-family--family-name-">[强制] font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</a></li>
-              </ul>
-            </li>
-            <li><a href="#52-">5.2 字号</a>
-              <ul>
-                <li><a href="#--windows--12px">[强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 12px。</a></li>
-              </ul>
-            </li>
-            <li><a href="#53-">5.3 字体风格</a>
-              <ul>
-                <li><a href="#--windows--normal--font-style">[建议] 需要在 Windows 平台显示的中文内容，不要使用除 normal 外的 font-style。其他平台也应慎用。</a></li>
-              </ul>
-            </li>
-            <li><a href="#54-">5.4 字重</a>
-              <ul>
-                <li><a href="#-font-weight-">[强制] font-weight 属性必须使用数值方式描述。</a></li>
-              </ul>
-            </li>
-            <li><a href="#55-">5.5 行高</a>
-              <ul>
-                <li><a href="#-line-height-">[建议] line-height 在定义文本段落时，应使用数值。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--120-">[强制] 每行不得超过 120 个字符，除非单行不可分割。</a></li>
+            <li><a href="#-----">[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。</a></li>
           </ul>
         </li>
-        <li><a href="#6-">6 变换与动画</a>
+        <li><a href="#25-">2.5 选择器</a>
           <ul>
-            <li>
-              <ul>
-                <li><a href="#--transition--transition-property">[强制] 使用 transition 时应指定 transition-property。</a></li>
-                <li><a href="#--9">[建议] 尽可能在浏览器能高效实现的属性上添加过渡和动画。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--rule--selector-">[强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</a></li>
+            <li><a href="#--">[强制] >、+、~ 选择器的两边各保留一个空格。</a></li>
+            <li><a href="#-">[强制] 属性选择器中的值必须用双引号包围。</a></li>
           </ul>
         </li>
-        <li><a href="#7-">7 响应式</a>
+        <li><a href="#26-">2.6 属性</a>
           <ul>
-            <li>
-              <ul>
-                <li><a href="#-media-query-">[强制] Media Query 不得单独编排，必须与相关的规则一起定义。</a></li>
-                <li><a href="#-media-query--1">[强制] Media Query 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。</a></li>
-                <li><a href="#--retina-">[建议] 尽可能给出在高分辨率设备 (Retina) 下效果更佳的样式。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--1">[强制] 属性定义必须另起一行。</a></li>
+            <li><a href="#--2">[强制] 属性定义后必须以分号结尾。</a></li>
           </ul>
         </li>
-        <li><a href="#8-">8 兼容性</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 通用</a>
+      <ul>
+        <li><a href="#31-">3.1 选择器</a>
           <ul>
-            <li><a href="#81-">8.1 属性前缀</a>
-              <ul>
-                <li><a href="#--10">[强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。</a></li>
-              </ul>
-            </li>
-            <li><a href="#82-hack">8.2 Hack</a>
-              <ul>
-                <li><a href="#--hack-">[建议] 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决。</a></li>
-                <li><a href="#---hack---hack">[建议] 尽量使用 选择器 hack 处理兼容性，而非 属性 hack。</a></li>
-                <li><a href="#---hack">[建议] 尽量使用简单的 属性 hack。</a></li>
-              </ul>
-            </li>
-            <li><a href="#83-expression">8.3 Expression</a>
-              <ul>
-                <li><a href="#--expression">[强制] 禁止使用 Expression。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--idclass-">[强制] 如无必要，不得为 id、class 选择器添加类型选择器进行限定。</a></li>
+            <li><a href="#--3-">[建议] 选择器的嵌套层级应不大于 3 级，位置靠后的限定条件应尽可能精确。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 属性缩写</a>
+          <ul>
+            <li><a href="#--3">[建议] 在可以使用缩写的情况下，尽量使用属性缩写。</a></li>
+            <li><a href="#--border--margin--padding-">[建议] 使用 border / margin / padding 等缩写时，应注意隐含值对实际数值的影响，确实需要设置多个方向的值时才使用缩写。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 属性书写顺序</a>
+          <ul>
+            <li><a href="#--rule-set--formatting-model--box-model--typographic--visual-">[建议] 同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 清除浮动</a>
+          <ul>
+            <li><a href="#--clear--bfc--clearfix">[建议] 当元素需要撑起高度以包含内部的浮动元素时，通过对伪类设置 clear 或触发 BFC 的方式进行 clearfix。尽量不使用增加空标签的方式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-important">3.5 !important</a>
+          <ul>
+            <li><a href="#--important-">[建议] 尽量不使用 !important 声明。</a></li>
+            <li><a href="#--important--1">[建议] 当需要强制指定样式且不允许任何场景覆盖时，通过标签内联和 !important 定义样式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-z-index">3.6 z-index</a>
+          <ul>
+            <li><a href="#--z-index-">[建议] 将 z-index 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。</a></li>
+            <li><a href="#-z-index--999999">[建议] 在可控环境下，期望显示在最上层的元素，z-index 指定为 999999。</a></li>
+            <li><a href="#--important-z-index--2147483647">[建议] 在第三方环境下，期望显示在最上层的元素，通过标签内联和 !important，将 z-index 指定为 2147483647。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 值与单位</a>
+      <ul>
+        <li><a href="#41-">4.1 文本</a>
+          <ul>
+            <li><a href="#--4">[强制] 文本内容必须用双引号包围。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 数值</a>
+          <ul>
+            <li><a href="#--0---1--0">[强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 0。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-url">4.3 url()</a>
+          <ul>
+            <li><a href="#-url-">[强制] url() 函数中的路径不加引号。</a></li>
+            <li><a href="#-url--1">[建议] url() 函数中的绝对路径可省去协议名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 长度</a>
+          <ul>
+            <li><a href="#--0--">[强制] 长度为 0 时须省略单位。 (也只有长度单位可省)</a></li>
+          </ul>
+        </li>
+        <li><a href="#45-">4.5 颜色</a>
+          <ul>
+            <li><a href="#-rgb--rrggbb-rgb">[强制] RGB 颜色值必须使用十六进制记号形式 #rrggbb。不允许使用 rgb()。</a></li>
+            <li><a href="#--5">[强制] 颜色值可以缩写时，必须使用缩写形式。</a></li>
+            <li><a href="#--6">[强制] 颜色值不允许使用命名色值。</a></li>
+            <li><a href="#--7">[建议] 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。</a></li>
+          </ul>
+        </li>
+        <li><a href="#46-2d-">4.6 2D 位置</a>
+          <ul>
+            <li><a href="#--8">[强制] 必须同时给出水平和垂直方向的位置。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-">5 文本编排</a>
+      <ul>
+        <li><a href="#51-">5.1 字体族</a>
+          <ul>
+            <li><a href="#-font-family--family-name">[强制] font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</a></li>
+            <li><a href="#-font-family----serif--sans-serif-">[强制] font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )。</a></li>
+            <li><a href="#-font-family--family-name-">[强制] font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-">5.2 字号</a>
+          <ul>
+            <li><a href="#--windows--12px">[强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 12px。</a></li>
+          </ul>
+        </li>
+        <li><a href="#53-">5.3 字体风格</a>
+          <ul>
+            <li><a href="#--windows--normal--font-style">[建议] 需要在 Windows 平台显示的中文内容，不要使用除 normal 外的 font-style。其他平台也应慎用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#54-">5.4 字重</a>
+          <ul>
+            <li><a href="#-font-weight-">[强制] font-weight 属性必须使用数值方式描述。</a></li>
+          </ul>
+        </li>
+        <li><a href="#55-">5.5 行高</a>
+          <ul>
+            <li><a href="#-line-height-">[建议] line-height 在定义文本段落时，应使用数值。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-">6 变换与动画</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#--transition--transition-property">[强制] 使用 transition 时应指定 transition-property。</a></li>
+            <li><a href="#--9">[建议] 尽可能在浏览器能高效实现的属性上添加过渡和动画。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7-">7 响应式</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#-media-query-">[强制] Media Query 不得单独编排，必须与相关的规则一起定义。</a></li>
+            <li><a href="#-media-query--1">[强制] Media Query 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。</a></li>
+            <li><a href="#--retina-">[建议] 尽可能给出在高分辨率设备 (Retina) 下效果更佳的样式。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#8-">8 兼容性</a>
+      <ul>
+        <li><a href="#81-">8.1 属性前缀</a>
+          <ul>
+            <li><a href="#--10">[强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。</a></li>
+          </ul>
+        </li>
+        <li><a href="#82-hack">8.2 Hack</a>
+          <ul>
+            <li><a href="#--hack-">[建议] 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决。</a></li>
+            <li><a href="#---hack---hack">[建议] 尽量使用 选择器 hack 处理兼容性，而非 属性 hack。</a></li>
+            <li><a href="#---hack">[建议] 尽量使用简单的 属性 hack。</a></li>
+          </ul>
+        </li>
+        <li><a href="#83-expression">8.3 Expression</a>
+          <ul>
+            <li><a href="#--expression">[强制] 禁止使用 Expression。</a></li>
           </ul>
         </li>
       </ul>
@@ -3926,197 +3922,193 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#css-">CSS 编码规范</a>
+    <li><a href="#1-">1 前言</a></li>
+    <li><a href="#2-">2 代码风格</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#21-">2.1 文件</a>
           <ul>
-            <li><a href="#21-">2.1 文件</a>
-              <ul>
-                <li><a href="#-css--bom--utf-8-">[建议] CSS 文件使用无 BOM 的 UTF-8 编码。</a></li>
-              </ul>
-            </li>
-            <li><a href="#22-">2.2 缩进</a>
-              <ul>
-                <li><a href="#--4--2---tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。</a></li>
-              </ul>
-            </li>
-            <li><a href="#23-">2.3 空格</a>
-              <ul>
-                <li><a href="#----">[强制] 选择器 与 { 之间必须包含空格。</a></li>
-                <li><a href="#--------">[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。</a></li>
-                <li><a href="#---">[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。</a></li>
-              </ul>
-            </li>
-            <li><a href="#24-">2.4 行长度</a>
-              <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符，除非单行不可分割。</a></li>
-                <li><a href="#-----">[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。</a></li>
-              </ul>
-            </li>
-            <li><a href="#25-">2.5 选择器</a>
-              <ul>
-                <li><a href="#--rule--selector-">[强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</a></li>
-                <li><a href="#--">[强制] >、+、~ 选择器的两边各保留一个空格。</a></li>
-                <li><a href="#-">[强制] 属性选择器中的值必须用双引号包围。</a></li>
-              </ul>
-            </li>
-            <li><a href="#26-">2.6 属性</a>
-              <ul>
-                <li><a href="#--1">[强制] 属性定义必须另起一行。</a></li>
-                <li><a href="#--2">[强制] 属性定义后必须以分号结尾。</a></li>
-              </ul>
-            </li>
+            <li><a href="#-css--bom--utf-8-">[建议] CSS 文件使用无 BOM 的 UTF-8 编码。</a></li>
           </ul>
         </li>
-        <li><a href="#3-">3 通用</a>
+        <li><a href="#22-">2.2 缩进</a>
           <ul>
-            <li><a href="#31-">3.1 选择器</a>
-              <ul>
-                <li><a href="#--idclass-">[强制] 如无必要，不得为 id、class 选择器添加类型选择器进行限定。</a></li>
-                <li><a href="#--3-">[建议] 选择器的嵌套层级应不大于 3 级，位置靠后的限定条件应尽可能精确。</a></li>
-              </ul>
-            </li>
-            <li><a href="#32-">3.2 属性缩写</a>
-              <ul>
-                <li><a href="#--3">[建议] 在可以使用缩写的情况下，尽量使用属性缩写。</a></li>
-                <li><a href="#--border--margin--padding-">[建议] 使用 border / margin / padding 等缩写时，应注意隐含值对实际数值的影响，确实需要设置多个方向的值时才使用缩写。</a></li>
-              </ul>
-            </li>
-            <li><a href="#33-">3.3 属性书写顺序</a>
-              <ul>
-                <li><a href="#--rule-set--formatting-model--box-model--typographic--visual-">[建议] 同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性。</a></li>
-              </ul>
-            </li>
-            <li><a href="#34-">3.4 清除浮动</a>
-              <ul>
-                <li><a href="#--clear--bfc--clearfix">[建议] 当元素需要撑起高度以包含内部的浮动元素时，通过对伪类设置 clear 或触发 BFC 的方式进行 clearfix。尽量不使用增加空标签的方式。</a></li>
-              </ul>
-            </li>
-            <li><a href="#35-important">3.5 !important</a>
-              <ul>
-                <li><a href="#--important-">[建议] 尽量不使用 !important 声明。</a></li>
-                <li><a href="#--important--1">[建议] 当需要强制指定样式且不允许任何场景覆盖时，通过标签内联和 !important 定义样式。</a></li>
-              </ul>
-            </li>
-            <li><a href="#36-z-index">3.6 z-index</a>
-              <ul>
-                <li><a href="#--z-index-">[建议] 将 z-index 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。</a></li>
-                <li><a href="#-z-index--999999">[建议] 在可控环境下，期望显示在最上层的元素，z-index 指定为 999999。</a></li>
-                <li><a href="#--important-z-index--2147483647">[建议] 在第三方环境下，期望显示在最上层的元素，通过标签内联和 !important，将 z-index 指定为 2147483647。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--4--2---tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。</a></li>
           </ul>
         </li>
-        <li><a href="#4-">4 值与单位</a>
+        <li><a href="#23-">2.3 空格</a>
           <ul>
-            <li><a href="#41-">4.1 文本</a>
-              <ul>
-                <li><a href="#--4">[强制] 文本内容必须用双引号包围。</a></li>
-              </ul>
-            </li>
-            <li><a href="#42-">4.2 数值</a>
-              <ul>
-                <li><a href="#--0---1--0">[强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 0。</a></li>
-              </ul>
-            </li>
-            <li><a href="#43-url">4.3 url()</a>
-              <ul>
-                <li><a href="#-url-">[强制] url() 函数中的路径不加引号。</a></li>
-                <li><a href="#-url--1">[建议] url() 函数中的绝对路径可省去协议名。</a></li>
-              </ul>
-            </li>
-            <li><a href="#44-">4.4 长度</a>
-              <ul>
-                <li><a href="#--0--">[强制] 长度为 0 时须省略单位。 (也只有长度单位可省)</a></li>
-              </ul>
-            </li>
-            <li><a href="#45-">4.5 颜色</a>
-              <ul>
-                <li><a href="#-rgb--rrggbb-rgb">[强制] RGB 颜色值必须使用十六进制记号形式 #rrggbb。不允许使用 rgb()。</a></li>
-                <li><a href="#--5">[强制] 颜色值可以缩写时，必须使用缩写形式。</a></li>
-                <li><a href="#--6">[强制] 颜色值不允许使用命名色值。</a></li>
-                <li><a href="#--7">[建议] 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。</a></li>
-              </ul>
-            </li>
-            <li><a href="#46-2d-">4.6 2D 位置</a>
-              <ul>
-                <li><a href="#--8">[强制] 必须同时给出水平和垂直方向的位置。</a></li>
-              </ul>
-            </li>
+            <li><a href="#----">[强制] 选择器 与 { 之间必须包含空格。</a></li>
+            <li><a href="#--------">[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。</a></li>
+            <li><a href="#---">[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。</a></li>
           </ul>
         </li>
-        <li><a href="#5-">5 文本编排</a>
+        <li><a href="#24-">2.4 行长度</a>
           <ul>
-            <li><a href="#51-">5.1 字体族</a>
-              <ul>
-                <li><a href="#-font-family--family-name">[强制] font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</a></li>
-                <li><a href="#-font-family----serif--sans-serif-">[强制] font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )。</a></li>
-                <li><a href="#-font-family--family-name-">[强制] font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</a></li>
-              </ul>
-            </li>
-            <li><a href="#52-">5.2 字号</a>
-              <ul>
-                <li><a href="#--windows--12px">[强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 12px。</a></li>
-              </ul>
-            </li>
-            <li><a href="#53-">5.3 字体风格</a>
-              <ul>
-                <li><a href="#--windows--normal--font-style">[建议] 需要在 Windows 平台显示的中文内容，不要使用除 normal 外的 font-style。其他平台也应慎用。</a></li>
-              </ul>
-            </li>
-            <li><a href="#54-">5.4 字重</a>
-              <ul>
-                <li><a href="#-font-weight-">[强制] font-weight 属性必须使用数值方式描述。</a></li>
-              </ul>
-            </li>
-            <li><a href="#55-">5.5 行高</a>
-              <ul>
-                <li><a href="#-line-height-">[建议] line-height 在定义文本段落时，应使用数值。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--120-">[强制] 每行不得超过 120 个字符，除非单行不可分割。</a></li>
+            <li><a href="#-----">[建议] 对于超长的样式，在样式值的 空格 处或 , 后换行，建议按逻辑分组。</a></li>
           </ul>
         </li>
-        <li><a href="#6-">6 变换与动画</a>
+        <li><a href="#25-">2.5 选择器</a>
           <ul>
-            <li>
-              <ul>
-                <li><a href="#--transition--transition-property">[强制] 使用 transition 时应指定 transition-property。</a></li>
-                <li><a href="#--9">[建议] 尽可能在浏览器能高效实现的属性上添加过渡和动画。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--rule--selector-">[强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</a></li>
+            <li><a href="#--">[强制] >、+、~ 选择器的两边各保留一个空格。</a></li>
+            <li><a href="#-">[强制] 属性选择器中的值必须用双引号包围。</a></li>
           </ul>
         </li>
-        <li><a href="#7-">7 响应式</a>
+        <li><a href="#26-">2.6 属性</a>
           <ul>
-            <li>
-              <ul>
-                <li><a href="#-media-query-">[强制] Media Query 不得单独编排，必须与相关的规则一起定义。</a></li>
-                <li><a href="#-media-query--1">[强制] Media Query 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。</a></li>
-                <li><a href="#--retina-">[建议] 尽可能给出在高分辨率设备 (Retina) 下效果更佳的样式。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--1">[强制] 属性定义必须另起一行。</a></li>
+            <li><a href="#--2">[强制] 属性定义后必须以分号结尾。</a></li>
           </ul>
         </li>
-        <li><a href="#8-">8 兼容性</a>
+      </ul>
+    </li>
+    <li><a href="#3-">3 通用</a>
+      <ul>
+        <li><a href="#31-">3.1 选择器</a>
           <ul>
-            <li><a href="#81-">8.1 属性前缀</a>
-              <ul>
-                <li><a href="#--10">[强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。</a></li>
-              </ul>
-            </li>
-            <li><a href="#82-hack">8.2 Hack</a>
-              <ul>
-                <li><a href="#--hack-">[建议] 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决。</a></li>
-                <li><a href="#---hack---hack">[建议] 尽量使用 选择器 hack 处理兼容性，而非 属性 hack。</a></li>
-                <li><a href="#---hack">[建议] 尽量使用简单的 属性 hack。</a></li>
-              </ul>
-            </li>
-            <li><a href="#83-expression">8.3 Expression</a>
-              <ul>
-                <li><a href="#--expression">[强制] 禁止使用 Expression。</a></li>
-              </ul>
-            </li>
+            <li><a href="#--idclass-">[强制] 如无必要，不得为 id、class 选择器添加类型选择器进行限定。</a></li>
+            <li><a href="#--3-">[建议] 选择器的嵌套层级应不大于 3 级，位置靠后的限定条件应尽可能精确。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-">3.2 属性缩写</a>
+          <ul>
+            <li><a href="#--3">[建议] 在可以使用缩写的情况下，尽量使用属性缩写。</a></li>
+            <li><a href="#--border--margin--padding-">[建议] 使用 border / margin / padding 等缩写时，应注意隐含值对实际数值的影响，确实需要设置多个方向的值时才使用缩写。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-">3.3 属性书写顺序</a>
+          <ul>
+            <li><a href="#--rule-set--formatting-model--box-model--typographic--visual-">[建议] 同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-">3.4 清除浮动</a>
+          <ul>
+            <li><a href="#--clear--bfc--clearfix">[建议] 当元素需要撑起高度以包含内部的浮动元素时，通过对伪类设置 clear 或触发 BFC 的方式进行 clearfix。尽量不使用增加空标签的方式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-important">3.5 !important</a>
+          <ul>
+            <li><a href="#--important-">[建议] 尽量不使用 !important 声明。</a></li>
+            <li><a href="#--important--1">[建议] 当需要强制指定样式且不允许任何场景覆盖时，通过标签内联和 !important 定义样式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-z-index">3.6 z-index</a>
+          <ul>
+            <li><a href="#--z-index-">[建议] 将 z-index 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。</a></li>
+            <li><a href="#-z-index--999999">[建议] 在可控环境下，期望显示在最上层的元素，z-index 指定为 999999。</a></li>
+            <li><a href="#--important-z-index--2147483647">[建议] 在第三方环境下，期望显示在最上层的元素，通过标签内联和 !important，将 z-index 指定为 2147483647。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-">4 值与单位</a>
+      <ul>
+        <li><a href="#41-">4.1 文本</a>
+          <ul>
+            <li><a href="#--4">[强制] 文本内容必须用双引号包围。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-">4.2 数值</a>
+          <ul>
+            <li><a href="#--0---1--0">[强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 0。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-url">4.3 url()</a>
+          <ul>
+            <li><a href="#-url-">[强制] url() 函数中的路径不加引号。</a></li>
+            <li><a href="#-url--1">[建议] url() 函数中的绝对路径可省去协议名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#44-">4.4 长度</a>
+          <ul>
+            <li><a href="#--0--">[强制] 长度为 0 时须省略单位。 (也只有长度单位可省)</a></li>
+          </ul>
+        </li>
+        <li><a href="#45-">4.5 颜色</a>
+          <ul>
+            <li><a href="#-rgb--rrggbb-rgb">[强制] RGB 颜色值必须使用十六进制记号形式 #rrggbb。不允许使用 rgb()。</a></li>
+            <li><a href="#--5">[强制] 颜色值可以缩写时，必须使用缩写形式。</a></li>
+            <li><a href="#--6">[强制] 颜色值不允许使用命名色值。</a></li>
+            <li><a href="#--7">[建议] 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。</a></li>
+          </ul>
+        </li>
+        <li><a href="#46-2d-">4.6 2D 位置</a>
+          <ul>
+            <li><a href="#--8">[强制] 必须同时给出水平和垂直方向的位置。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-">5 文本编排</a>
+      <ul>
+        <li><a href="#51-">5.1 字体族</a>
+          <ul>
+            <li><a href="#-font-family--family-name">[强制] font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</a></li>
+            <li><a href="#-font-family----serif--sans-serif-">[强制] font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )。</a></li>
+            <li><a href="#-font-family--family-name-">[强制] font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-">5.2 字号</a>
+          <ul>
+            <li><a href="#--windows--12px">[强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 12px。</a></li>
+          </ul>
+        </li>
+        <li><a href="#53-">5.3 字体风格</a>
+          <ul>
+            <li><a href="#--windows--normal--font-style">[建议] 需要在 Windows 平台显示的中文内容，不要使用除 normal 外的 font-style。其他平台也应慎用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#54-">5.4 字重</a>
+          <ul>
+            <li><a href="#-font-weight-">[强制] font-weight 属性必须使用数值方式描述。</a></li>
+          </ul>
+        </li>
+        <li><a href="#55-">5.5 行高</a>
+          <ul>
+            <li><a href="#-line-height-">[建议] line-height 在定义文本段落时，应使用数值。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-">6 变换与动画</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#--transition--transition-property">[强制] 使用 transition 时应指定 transition-property。</a></li>
+            <li><a href="#--9">[建议] 尽可能在浏览器能高效实现的属性上添加过渡和动画。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7-">7 响应式</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#-media-query-">[强制] Media Query 不得单独编排，必须与相关的规则一起定义。</a></li>
+            <li><a href="#-media-query--1">[强制] Media Query 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。</a></li>
+            <li><a href="#--retina-">[建议] 尽可能给出在高分辨率设备 (Retina) 下效果更佳的样式。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#8-">8 兼容性</a>
+      <ul>
+        <li><a href="#81-">8.1 属性前缀</a>
+          <ul>
+            <li><a href="#--10">[强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。</a></li>
+          </ul>
+        </li>
+        <li><a href="#82-hack">8.2 Hack</a>
+          <ul>
+            <li><a href="#--hack-">[建议] 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决。</a></li>
+            <li><a href="#---hack---hack">[建议] 尽量使用 选择器 hack 处理兼容性，而非 属性 hack。</a></li>
+            <li><a href="#---hack">[建议] 尽量使用简单的 属性 hack。</a></li>
+          </ul>
+        </li>
+        <li><a href="#83-expression">8.3 Expression</a>
+          <ul>
+            <li><a href="#--expression">[强制] 禁止使用 Expression。</a></li>
           </ul>
         </li>
       </ul>
