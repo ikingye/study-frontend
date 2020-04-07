@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="基础"><meta property="og:title" content="基础" />
-<meta property="og:description" content="基础面试题 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-frontend/docs/framework/angular/appendix/interview/basic/" />
-<meta property="article:modified_time" content="2020-03-29T14:02:42+08:00" />
-<title>基础 | 前端学习笔记</title>
+<meta name="description" content="版本"><meta property="og:title" content="版本" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ikingye.github.io/study-frontend/docs/node/basic/version/" />
+
+<title>版本 | 前端学习笔记</title>
 <link rel="icon" href="/study-frontend/favicon.png" type="image/x-icon">
 
 
@@ -18,6 +18,7 @@
 
 <script defer src="/study-frontend/en.search.min.92acd5ccf75eb3b142d241eac2254809151884caf909d9a2788f30b9e70bf41b.js" integrity="sha256-kqzVzPdes7FC0kHqwiVICRUYhMr5CdmieI8wuecL9Bs="></script>
 
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-frontend/docs/node/basic/version/index.xml" title="前端学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -622,7 +623,7 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/study-frontend/docs/node/basic/version/" >
+  <a href="/study-frontend/docs/node/basic/version/"  class="active">
       版本
   </a>
 
@@ -1746,7 +1747,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-frontend/docs/framework/angular/appendix/interview/basic/"  class="active">
+  <a href="/study-frontend/docs/framework/angular/appendix/interview/basic/" >
       基础
   </a>
 
@@ -1896,7 +1897,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-frontend/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>基础</strong>
+  <strong>版本</strong>
 
   <label for="toc-control">
     <img src="/study-frontend/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -1910,7 +1911,20 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">基础面试题</a></li>
+    <li><a href="#nodejs-">Node.js 版本</a>
+      <ul>
+        <li><a href="#heading">版本控制</a>
+          <ul>
+            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm-github-starshttpsimgshieldsiogithubstarsnvm-shnvmsvg">nvm-sh/nvm Github stars</a>
+              <ul>
+                <li><a href="#heading-1">安装</a></li>
+                <li><a href="#heading-2">基础命令</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1922,8 +1936,36 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="heading">基础面试题</h1>
-</article>
+<article class="markdown"><h1 id="nodejs-">Node.js 版本</h1>
+<h2 id="heading">版本控制</h2>
+<h3 id="nvm-shnvmhttpsgithubcomnvm-shnvm-github-starshttpsimgshieldsiogithubstarsnvm-shnvmsvg"><a href="https://github.com/nvm-sh/nvm">nvm-sh/nvm</a> <img src="https://img.shields.io/github/stars/nvm-sh/nvm.svg" alt="Github stars"></h3>
+<p>Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions</p>
+<h4 id="heading-1">安装</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+export NVM_DIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME-<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.nvm</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/nvm</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">[</span> -s <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\.</span> <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh</span><span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># This loads nvm</span>
+</code></pre></div><h4 id="heading-2">基础命令</h4>
+<ul>
+<li><code>install</code>
+<ul>
+<li><code>nvm install node</code>
+<ul>
+<li>&ldquo;node&rdquo; is an alias for the latest version</li>
+</ul>
+</li>
+<li><code>nvm install --lts</code></li>
+</ul>
+</li>
+</ul>
+<p>其他命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nvm ls-remote
+
+nvm use node
+
+<span style="color:#75715e"># get the path to the executable to where it was installed</span>
+nvm which 5.0
+</code></pre></div></article>
  
       
 
@@ -1935,9 +1977,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/9e02cdf688725bdf58bea8eb7f0f1b097c52a5c6" title='Last modified by yewang | 2020-03-29' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/2ee09237952ee165e310d7c5f08a4b881b474216" title='Last modified by yewang | 2020-04-07' target="_blank" rel="noopener">
       <img src="/study-frontend/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-29</span>
+      <span>2020-04-07</span>
     </a>
   </div>
 
@@ -1971,7 +2013,20 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">基础面试题</a></li>
+    <li><a href="#nodejs-">Node.js 版本</a>
+      <ul>
+        <li><a href="#heading">版本控制</a>
+          <ul>
+            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm-github-starshttpsimgshieldsiogithubstarsnvm-shnvmsvg">nvm-sh/nvm Github stars</a>
+              <ul>
+                <li><a href="#heading-1">安装</a></li>
+                <li><a href="#heading-2">基础命令</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
