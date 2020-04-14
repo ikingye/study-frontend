@@ -29,7 +29,7 @@
 2 代码风格 2.1 缩进 [强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符 2.2 单行最长限制 [强制] 每行不得超过 120 个字符 2.3 模块书写顺序 [建议] template -&gt; script -&gt; style 3 template 部分 3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-frontend/docs/javascript/basic/practice/spec/baidu/vue/" />
-
+<meta property="article:modified_time" content="2020-03-16T20:10:59+08:00" />
 <title>Vue | 前端学习笔记</title>
 <link rel="icon" href="/study-frontend/favicon.png" type="image/x-icon">
 
@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="/study-frontend/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
 
 
-<script defer src="/study-frontend/en.search.min.33c8443d441a15eaed05deb742d32d1d17ce2055c1d0462c8f3610d31ebd5426.js" integrity="sha256-M8hEPUQaFertBd63QtMtHRfOIFXB0EYsjzYQ0x69VCY="></script>
+<script defer src="/study-frontend/en.search.min.101bf5337a6c00a978085df97ab57a731f0266c0e89422d484fdb12ce1665d3d.js" integrity="sha256-EBv1M3psAKl4CF35erV6cx8CZsDolCLUhP2xLOFmXT0="></script>
 
 <!--
 Made with Book Theme
@@ -2028,123 +2028,123 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#vue-">Vue 组件代码规范</a>
+    <li><a href="#vue-组件代码规范">Vue 组件代码规范</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#1-前言">1 前言</a></li>
+        <li><a href="#2-代码风格">2 代码风格</a>
           <ul>
-            <li><a href="#21-">2.1 缩进</a>
+            <li><a href="#21-缩进">2.1 缩进</a>
               <ul>
-                <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
+                <li><a href="#强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格或-tab-字符">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格或 <code>tab</code> 字符</a></li>
               </ul>
             </li>
-            <li><a href="#22-">2.2 单行最长限制</a>
+            <li><a href="#22-单行最长限制">2.2 单行最长限制</a>
               <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
+                <li><a href="#强制-每行不得超过-120-个字符">[强制] 每行不得超过 <code>120</code> 个字符</a></li>
               </ul>
             </li>
-            <li><a href="#23-">2.3 模块书写顺序</a>
+            <li><a href="#23-模块书写顺序">2.3 模块书写顺序</a>
               <ul>
-                <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
+                <li><a href="#建议-template---script---style">[建议] <code>template</code> -&gt; <code>script</code> -&gt; <code>style</code></a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#3-template-">3 template 部分</a>
+        <li><a href="#3-template-部分">3 template 部分</a>
           <ul>
-            <li><a href="#31-">3.1 根节点</a>
+            <li><a href="#31-根节点">3.1 根节点</a>
               <ul>
-                <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
+                <li><a href="#强制-template-根节点只允许包含一个直接子节点以下情况都是不允许的">[强制] <code>template</code> 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
               </ul>
             </li>
-            <li><a href="#32-">3.2 标签</a>
+            <li><a href="#32-标签">3.2 标签</a>
               <ul>
-                <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
-                <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
-                <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
-                <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
-                <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
-                <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
-                <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
+                <li><a href="#强制-自定义组件的标签名不得使用-html-中默认已定义的标签reserved-html-elements要求至少由两个单词组成并且符合-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 <code>kebab-case</code></a></li>
+                <li><a href="#强制html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-不需要闭合其它类型标签都需要闭合">[强制]<a href="https://www.w3.org/TR/html51/syntax.html#void-elements">html void element</a> 不需要闭合，其它类型标签都需要闭合</a></li>
+                <li><a href="#强制-非根结点的-template-标签里必须有一个以上的子结点">[强制] 非根结点的 <code>template</code> 标签里必须有一个以上的子结点</a></li>
+                <li><a href="#强制-template-标签上不能带有-key-属性">[强制] <code>template</code> 标签上不能带有 <code>key</code> 属性</a></li>
+                <li><a href="#强制-如果自定义标签中没有内容需要以自闭合标签形式出现">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
+                <li><a href="#强制-标签右括号--的位置">[强制] 标签右括号 <code>&gt;</code> 的位置：</a></li>
+                <li><a href="#建议-自闭合标签的--前不用添加空格">[建议] 自闭合标签的 <code>/&gt;</code> 前不用添加空格</a></li>
               </ul>
             </li>
-            <li><a href="#33-">3.3 属性</a>
+            <li><a href="#33-属性">3.3 属性</a>
               <ul>
-                <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
-                <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
-                <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
-                <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
-                <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
-                <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
-                <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
-                <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
-                <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
+                <li><a href="#强制-属性值必须用双引号包围">[强制] 属性值必须用双引号包围</a></li>
+                <li><a href="#强制-模板中的属性命名需要符合-kebab-case">[强制] 模板中的属性命名需要符合 <code>kebab-case</code></a></li>
+                <li><a href="#强制-class--style-属性值不能设置空字符串">[强制] <code>class</code> / <code>style</code> 属性值不能设置空字符串</a></li>
+                <li><a href="#建议-布尔类型的属性值为-true-时建议不添加属性值">[建议] 布尔类型的属性值为 <code>true</code> 时，建议不添加属性值</a></li>
+                <li><a href="#强制-当组件的属性多于-2-个时必须分成多行每行写一个属性只有属性个数小于或等于-2-个时可以写在一行内">[强制] 当组件的属性多于 <code>2</code> 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 <code>2</code> 个时，可以写在一行内</a></li>
+                <li><a href="#建议-当元素有多个属性时应该按照统一的顺序书写">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
+                <li><a href="#强制-不能有重复的属性class-和-style-除外">[强制] 不能有重复的属性，<code>class</code> 和 <code>style</code> 除外</a></li>
+                <li><a href="#建议-slot-命名采用-kebab-case">[建议] <code>slot</code> 命名采用 <code>kebab-case</code></a></li>
+                <li><a href="#建议-ref-命名采用-pascalcase">[建议] <code>ref</code> 命名采用 <code>PascalCase</code></a></li>
               </ul>
             </li>
-            <li><a href="#34-">3.4 指令</a>
+            <li><a href="#34-指令">3.4 指令</a>
               <ul>
-                <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
-                <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
-                <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
+                <li><a href="#强制-在使用-v-for-的元素上添加-key以便维护内部组件及其子树的状态">[强制] 在使用 <code>v-for</code> 的元素上添加 <code>key</code>，以便维护内部组件及其子树的状态</a></li>
+                <li><a href="#建议-不要把-v-if-和-v-for-同时用在同一个元素上">[建议] 不要把 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上</a></li>
+                <li><a href="#建议-以下指令统一使用缩写">[建议] 以下指令统一使用缩写</a></li>
               </ul>
             </li>
-            <li><a href="#35-mustache">3.5 插值（Mustache）</a>
+            <li><a href="#35-插值mustache">3.5 插值（Mustache）</a>
               <ul>
-                <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
+                <li><a href="#建议-插值左右添加一个空格">[建议] 插值左右添加一个空格</a></li>
               </ul>
             </li>
-            <li><a href="#36-">3.6 空格</a>
+            <li><a href="#36-空格">3.6 空格</a>
               <ul>
-                <li><a href="#--5">[强制] 不能有多余空格</a></li>
+                <li><a href="#强制-不能有多余空格">[强制] 不能有多余空格</a></li>
               </ul>
             </li>
-            <li><a href="#37-">3.7 变量</a>
+            <li><a href="#37-变量">3.7 变量</a>
               <ul>
-                <li><a href="#--6">[强制] 不能有多余的变量</a></li>
-                <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
+                <li><a href="#强制-不能有多余的变量">[强制] 不能有多余的变量</a></li>
+                <li><a href="#强制-禁止在插值中使用-this">[强制] 禁止在插值中使用 <code>this</code></a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#4-javascript-">4 javascript 部分</a>
+        <li><a href="#4-javascript-部分">4 javascript 部分</a>
           <ul>
             <li><a href="#41-props">4.1 props</a>
               <ul>
-                <li><a href="#--props-">[强制] 指定 props 类型</a></li>
-                <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
-                <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
-                <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
+                <li><a href="#强制-指定-props-类型">[强制] 指定 <code>props</code> 类型</a></li>
+                <li><a href="#强制-如果-props-没有指定为-required-或者-required-为-false则需要指定默认值">[强制] 如果 <code>props</code> 没有指定为 <code>required</code> 或者 <code>required</code> 为 <code>false</code>，则需要指定默认值</a></li>
+                <li><a href="#强制-props-提供的默认值必须满足校验条件">[强制] <code>props</code> 提供的默认值必须满足校验条件</a></li>
+                <li><a href="#强制-在-props-中声明的属性其属性名应该始终符合-camelcase">[强制] 在 <code>props</code> 中声明的属性，其属性名应该始终符合 <code>camelCase</code></a></li>
               </ul>
             </li>
             <li><a href="#42-data">4.2 data</a>
               <ul>
-                <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
-                <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
-                <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
+                <li><a href="#强制-data-必须是一个函数">[强制] <code>data</code> 必须是一个函数</a></li>
+                <li><a href="#强制-data-中禁止使用-computed-中的变量">[强制] <code>data</code> 中禁止使用 <code>computed</code> 中的变量</a></li>
+                <li><a href="#强制-props-data-computed-methods-中不能有重复的-key">[强制] <code>props</code>, <code>data</code>, <code>computed</code>, <code>methods</code> 中不能有重复的 <code>key</code></a></li>
               </ul>
             </li>
-            <li><a href="#43-">4.3 变量</a>
+            <li><a href="#43-变量">4.3 变量</a>
               <ul>
-                <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
+                <li><a href="#强制-不能使用-vue-中的保留字段命名变量">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
               </ul>
             </li>
-            <li><a href="#44-">4.4 其它</a>
+            <li><a href="#44-其它">4.4 其它</a>
               <ul>
-                <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
+                <li><a href="#建议-组件中使用-emit-事件时携带的参数个数不应该超过-2-个建议将数据参数以-object-形式传递将事件参数-event-放在最后">[建议] 组件中使用 <code>$emit</code> 事件时携带的参数，个数不应该超过 <code>2</code> 个。建议将数据参数以 <code>Object</code> 形式传递，将事件参数 <code>event</code> 放在最后</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#5-style-">5 style 部分</a>
+        <li><a href="#5-style-部分">5 style 部分</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
+                <li><a href="#建议-为组件样式设置作用域">[建议] 为组件样式设置作用域</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#6-">6 参考</a></li>
+        <li><a href="#6-参考">6 参考</a></li>
       </ul>
     </li>
   </ul>
@@ -2157,7 +2157,7 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="vue-">Vue 组件代码规范</h1>
+<article class="markdown"><h1 id="vue-组件代码规范">Vue 组件代码规范</h1>
 <p><a href="#1">1 前言</a></p>
 <p><a href="#2">2 代码风格</a></p>
 <p><a href="#2-1">2.1 缩进</a></p>
@@ -2178,18 +2178,18 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="#4-4">4.4 其他</a></p>
 <p><a href="#5">5 style 部分</a></p>
 <p><a href="#6">6 参考</a></p>
-<h2 id="1-">1 前言</h2>
+<h2 id="1-前言">1 前言</h2>
 <p>任何问题或建议，欢迎跟我们讨论: <a href="mailto:fe-styleguide@baidu.com">fe-styleguide@baidu.com</a></p>
-<h2 id="2-">2 代码风格</h2>
-<h3 id="21-">2.1 缩进</h3>
-<h4 id="--4--2--tab-">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格或 <code>tab</code> 字符</h4>
-<h3 id="22-">2.2 单行最长限制</h3>
-<h4 id="--120-">[强制] 每行不得超过 <code>120</code> 个字符</h4>
-<h3 id="23-">2.3 模块书写顺序</h3>
-<h4 id="-template---script---style">[建议] <code>template</code> -&gt; <code>script</code> -&gt; <code>style</code></h4>
-<h2 id="3-template-">3 template 部分</h2>
-<h3 id="31-">3.1 根节点</h3>
-<h4 id="-template-">[强制] <code>template</code> 根节点只允许包含一个直接子节点，以下情况都是不允许的：</h4>
+<h2 id="2-代码风格">2 代码风格</h2>
+<h3 id="21-缩进">2.1 缩进</h3>
+<h4 id="强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格或-tab-字符">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格或 <code>tab</code> 字符</h4>
+<h3 id="22-单行最长限制">2.2 单行最长限制</h3>
+<h4 id="强制-每行不得超过-120-个字符">[强制] 每行不得超过 <code>120</code> 个字符</h4>
+<h3 id="23-模块书写顺序">2.3 模块书写顺序</h3>
+<h4 id="建议-template---script---style">[建议] <code>template</code> -&gt; <code>script</code> -&gt; <code>style</code></h4>
+<h2 id="3-template-部分">3 template 部分</h2>
+<h3 id="31-根节点">3.1 根节点</h3>
+<h4 id="强制-template-根节点只允许包含一个直接子节点以下情况都是不允许的">[强制] <code>template</code> 根节点只允许包含一个直接子节点，以下情况都是不允许的：</h4>
 <ul>
 <li>根结点为空；</li>
 <li>根结点是文字；</li>
@@ -2211,8 +2211,8 @@ https://github.com/alex-shpak/hugo-book
 
 // good
 &lt;<span style="color:#f92672">template</span>&gt;&lt;<span style="color:#f92672">div</span>&gt;one&lt;/<span style="color:#f92672">div</span>&gt;&lt;/<span style="color:#f92672">template</span>&gt;
-</code></pre></div><h3 id="32-">3.2 标签</h3>
-<h4 id="--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 <code>kebab-case</code></h4>
+</code></pre></div><h3 id="32-标签">3.2 标签</h3>
+<h4 id="强制-自定义组件的标签名不得使用-html-中默认已定义的标签reserved-html-elements要求至少由两个单词组成并且符合-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 <code>kebab-case</code></h4>
 <p>解释：</p>
 <p>避免和 HTML 保留字段冲突导致错误。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
@@ -2265,7 +2265,7 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><code>svg</code>,<code>animate</code>,<code>circle</code>,<code>clippath</code>,<code>cursor</code>,<code>defs</code>,<code>desc</code>,<code>ellipse</code>,<code>filter</code>,<code>font-face</code>,<code>foreignObject</code>,<code>g</code>,<code>glyph</code>,<code>image</code>,<code>line</code>,<code>marker</code>,<code>mask</code>,<code>missing-glyph</code>,<code>path</code>,<code>pattern</code>,<code>polygon</code>,<code>polyline</code>,<code>rect</code>,<code>switch</code>,<code>symbol</code>,<code>text</code>,<code>textpath</code>,<code>tspan</code>,<code>use</code>,<code>view</code></p>
 </blockquote>
-<h4 id="html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]<a href="https://www.w3.org/TR/html51/syntax.html#void-elements">html void element</a> 不需要闭合，其它类型标签都需要闭合</h4>
+<h4 id="强制html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-不需要闭合其它类型标签都需要闭合">[强制]<a href="https://www.w3.org/TR/html51/syntax.html#void-elements">html void element</a> 不需要闭合，其它类型标签都需要闭合</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">input</span>&gt;&lt;/<span style="color:#f92672">input</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;&lt;/<span style="color:#f92672">br</span>&gt;
@@ -2273,7 +2273,7 @@ https://github.com/alex-shpak/hugo-book
 // good
 &lt;<span style="color:#f92672">input</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
-</code></pre></div><h4 id="--template-">[强制] 非根结点的 <code>template</code> 标签里必须有一个以上的子结点</h4>
+</code></pre></div><h4 id="强制-非根结点的-template-标签里必须有一个以上的子结点">[强制] 非根结点的 <code>template</code> 标签里必须有一个以上的子结点</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">ul</span>&gt;
   &lt;<span style="color:#f92672">template</span>&gt;
@@ -2293,7 +2293,7 @@ https://github.com/alex-shpak/hugo-book
     &lt;<span style="color:#f92672">li</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
   &lt;/<span style="color:#f92672">template</span>&gt;
 &lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><h4 id="-template--key-">[强制] <code>template</code> 标签上不能带有 <code>key</code> 属性</h4>
+</code></pre></div><h4 id="强制-template-标签上不能带有-key-属性">[强制] <code>template</code> 标签上不能带有 <code>key</code> 属性</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">template</span>&gt;
   &lt;<span style="color:#f92672">div</span>&gt;
@@ -2310,13 +2310,13 @@ https://github.com/alex-shpak/hugo-book
     &lt;<span style="color:#f92672">template</span>&gt;&lt;/<span style="color:#f92672">template</span>&gt;
   &lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">template</span>&gt;
-</code></pre></div><h4 id="-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</h4>
+</code></pre></div><h4 id="强制-如果自定义标签中没有内容需要以自闭合标签形式出现">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span>&gt;&lt;/<span style="color:#f92672">c-title</span>&gt;
 
 // good
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
-</code></pre></div><h4 id="---">[强制] 标签右括号 <code>&gt;</code> 的位置：</h4>
+</code></pre></div><h4 id="强制-标签右括号--的位置">[强制] 标签右括号 <code>&gt;</code> 的位置：</h4>
 <ul>
 <li>元素只有一行时，右括号与元素保持在同一行。</li>
 <li>多行元素（元素最后一个属性与左括号 <code>&lt;</code> 不在同一行）时，右括号 <code>&gt;</code> 需要另起一行，缩进与左括号 <code>&lt;</code> 保持对齐。</li>
@@ -2340,34 +2340,34 @@ https://github.com/alex-shpak/hugo-book
 
 // good
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
-</code></pre></div><h4 id="----1">[建议] 自闭合标签的 <code>/&gt;</code> 前不用添加空格</h4>
+</code></pre></div><h4 id="建议-自闭合标签的--前不用添加空格">[建议] 自闭合标签的 <code>/&gt;</code> 前不用添加空格</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
 
 // good
 &lt;<span style="color:#f92672">div</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
-</code></pre></div><h3 id="33-">3.3 属性</h3>
-<h4 id="--1">[强制] 属性值必须用双引号包围</h4>
+</code></pre></div><h3 id="33-属性">3.3 属性</h3>
+<h4 id="强制-属性值必须用双引号包围">[强制] 属性值必须用双引号包围</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;c-color&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 
 // good
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;c-color&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h4 id="--kebab-case">[强制] 模板中的属性命名需要符合 <code>kebab-case</code></h4>
+</code></pre></div><h4 id="强制-模板中的属性命名需要符合-kebab-case">[强制] 模板中的属性命名需要符合 <code>kebab-case</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">my-component</span> <span style="color:#a6e22e">greetingText</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hi&#34;</span> /&gt;
 
 // good
 &lt;<span style="color:#f92672">my-component</span> <span style="color:#a6e22e">greeting-text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hi&#34;</span> /&gt;
-</code></pre></div><h4 id="-class--style-">[强制] <code>class</code> / <code>style</code> 属性值不能设置空字符串</h4>
+</code></pre></div><h4 id="强制-class--style-属性值不能设置空字符串">[强制] <code>class</code> / <code>style</code> 属性值不能设置空字符串</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 
 // good
 &lt;<span style="color:#f92672">div</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h4 id="--true-">[建议] 布尔类型的属性值为 <code>true</code> 时，建议不添加属性值</h4>
+</code></pre></div><h4 id="建议-布尔类型的属性值为-true-时建议不添加属性值">[建议] 布尔类型的属性值为 <code>true</code> 时，建议不添加属性值</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;带箭头标题&#34;</span> <span style="color:#a6e22e">:arrow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> /&gt;
 
@@ -2375,14 +2375,14 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">disabled</span> /&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;带箭头标题&#34;</span> <span style="color:#a6e22e">arrow</span> /&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;带箭头标题&#34;</span> <span style="color:#a6e22e">:arrow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> /&gt;
-</code></pre></div><h4 id="--2--2-">[强制] 当组件的属性多于 <code>2</code> 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 <code>2</code> 个时，可以写在一行内</h4>
+</code></pre></div><h4 id="强制-当组件的属性多于-2-个时必须分成多行每行写一个属性只有属性个数小于或等于-2-个时可以写在一行内">[强制] 当组件的属性多于 <code>2</code> 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 <code>2</code> 个时，可以写在一行内</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
 
 // good
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> /&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">:label-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span> /&gt;
-</code></pre></div><h4 id="--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</h4>
+</code></pre></div><h4 id="建议-当元素有多个属性时应该按照统一的顺序书写">[建议] 当元素有多个属性时，应该按照统一的顺序书写</h4>
 <p>优先级顺序：</p>
 <ol>
 <li>定义（提供组件的选项）
@@ -2444,7 +2444,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ol>
-<h4 id="-class--style--1">[强制] 不能有重复的属性，<code>class</code> 和 <code>style</code> 除外</h4>
+<h4 id="强制-不能有重复的属性class-和-style-除外">[强制] 不能有重复的属性，<code>class</code> 和 <code>style</code> 除外</h4>
 <p>解释：</p>
 <p>这里重复的属性包括以下两种情况：</p>
 <ol>
@@ -2462,20 +2462,20 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">foo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;abc&#34;</span> /&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;c-color&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{&#39;c-selected&#39;: selected}&#34;</span> /&gt;
 &lt;<span style="color:#f92672">c-title</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: #000;&#34;</span> <span style="color:#a6e22e">:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{width: &#39;100px&#39;}&#34;</span> /&gt;
-</code></pre></div><h4 id="-slot--kebab-case">[建议] <code>slot</code> 命名采用 <code>kebab-case</code></h4>
+</code></pre></div><h4 id="建议-slot-命名采用-kebab-case">[建议] <code>slot</code> 命名采用 <code>kebab-case</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header-left&#34;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
 
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header-left&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h4 id="-ref--pascalcase">[建议] <code>ref</code> 命名采用 <code>PascalCase</code></h4>
+</code></pre></div><h4 id="建议-ref-命名采用-pascalcase">[建议] <code>ref</code> 命名采用 <code>PascalCase</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">ref</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userInfo&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h3 id="34-">3.4 指令</h3>
-<h4 id="--v-for--key">[强制] 在使用 <code>v-for</code> 的元素上添加 <code>key</code>，以便维护内部组件及其子树的状态</h4>
+</code></pre></div><h3 id="34-指令">3.4 指令</h3>
+<h4 id="强制-在使用-v-for-的元素上添加-key以便维护内部组件及其子树的状态">[强制] 在使用 <code>v-for</code> 的元素上添加 <code>key</code>，以便维护内部组件及其子树的状态</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
   &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;todo in todos&#34;</span> <span style="color:#a6e22e">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;todo.id&#34;</span>&gt;
     {{ todo.text }}
   &lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><h4 id="--v-if--v-for-">[建议] 不要把 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上</h4>
+</code></pre></div><h4 id="建议-不要把-v-if-和-v-for-同时用在同一个元素上">[建议] 不要把 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上</h4>
 <p>解释：</p>
 <p>当 Vue 处理指令时，<code>v-for</code> 比 <code>v-if</code> 具有更高的优先级。所以如果想要使用 <code>v-if</code> 判断 <code>v-for</code> 元素列表是否显示，将两个指令同时应用在同一个元素的方法就是错误的。引入这个规则是为了避免引起困惑。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
@@ -2504,31 +2504,31 @@ https://github.com/alex-shpak/hugo-book
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h4 id="--3">[建议] 以下指令统一使用缩写</h4>
+</code></pre></div><h4 id="建议-以下指令统一使用缩写">[建议] 以下指令统一使用缩写</h4>
 <ul>
 <li>使用 <code>:</code> 表示 <code>v-bind:</code></li>
 <li>使用 <code>@</code> 表示 <code>v-on:</code></li>
 </ul>
-<h3 id="35-mustache">3.5 插值（Mustache）</h3>
-<h4 id="--4">[建议] 插值左右添加一个空格</h4>
+<h3 id="35-插值mustache">3.5 插值（Mustache）</h3>
+<h4 id="建议-插值左右添加一个空格">[建议] 插值左右添加一个空格</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">div</span>&gt;{{ text }}&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span>&gt;{{text}}&lt;/<span style="color:#f92672">div</span>&gt;
 
 // good
 &lt;<span style="color:#f92672">div</span>&gt;{{ text }}&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h3 id="36-">3.6 空格</h3>
-<h4 id="--5">[强制] 不能有多余空格</h4>
+</code></pre></div><h3 id="36-空格">3.6 空格</h3>
+<h4 id="强制-不能有多余空格">[强制] 不能有多余空格</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#a6e22e">:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 
 // good
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#a6e22e">:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h3 id="37-">3.7 变量</h3>
-<h4 id="--6">[强制] 不能有多余的变量</h4>
+</code></pre></div><h3 id="37-变量">3.7 变量</h3>
+<h4 id="强制-不能有多余的变量">[强制] 不能有多余的变量</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">ol</span>&gt;
-  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> &#34;i&#34; is defined but never used. </span><span style="color:#75715e">--&gt;</span>
+  <span style="color:#75715e">&lt;!-- &#34;i&#34; is defined but never used. --&gt;</span>
   &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;i in 5&#34;</span>&gt;item&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ol</span>&gt;
 
@@ -2536,7 +2536,7 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">ol</span>&gt;
   &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;i in 5&#34;</span>&gt;{{ i }}&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ol</span>&gt;
-</code></pre></div><h4 id="--this">[强制] 禁止在插值中使用 <code>this</code></h4>
+</code></pre></div><h4 id="强制-禁止在插值中使用-this">[强制] 禁止在插值中使用 <code>this</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">:href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;this.url&#34;</span>&gt;
   {{ this.text }}
@@ -2546,9 +2546,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">:href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span>&gt;
   {{ text }}
 &lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><h2 id="4-javascript-">4 javascript 部分</h2>
+</code></pre></div><h2 id="4-javascript-部分">4 javascript 部分</h2>
 <h3 id="41-props">4.1 props</h3>
-<h4 id="--props-">[强制] 指定 <code>props</code> 类型</h4>
+<h4 id="强制-指定-props-类型">[强制] 指定 <code>props</code> 类型</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2563,7 +2563,7 @@ export default {
         status: String
     }
 };
-</code></pre></div><h4 id="--props--required--required--false">[强制] 如果 <code>props</code> 没有指定为 <code>required</code> 或者 <code>required</code> 为 <code>false</code>，则需要指定默认值</h4>
+</code></pre></div><h4 id="强制-如果-props-没有指定为-required-或者-required-为-false则需要指定默认值">[强制] 如果 <code>props</code> 没有指定为 <code>required</code> 或者 <code>required</code> 为 <code>false</code>，则需要指定默认值</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
   <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2601,7 +2601,7 @@ export default {
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h4 id="-props-">[强制] <code>props</code> 提供的默认值必须满足校验条件</h4>
+</code></pre></div><h4 id="强制-props-提供的默认值必须满足校验条件">[强制] <code>props</code> 提供的默认值必须满足校验条件</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2652,7 +2652,7 @@ export default {
         }
     }
 };
-</code></pre></div><h4 id="--props--camelcase">[强制] 在 <code>props</code> 中声明的属性，其属性名应该始终符合 <code>camelCase</code></h4>
+</code></pre></div><h4 id="强制-在-props-中声明的属性其属性名应该始终符合-camelcase">[强制] 在 <code>props</code> 中声明的属性，其属性名应该始终符合 <code>camelCase</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
   <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2671,7 +2671,7 @@ export default {
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><h3 id="42-data">4.2 data</h3>
-<h4 id="-data-">[强制] <code>data</code> 必须是一个函数</h4>
+<h4 id="强制-data-必须是一个函数">[强制] <code>data</code> 必须是一个函数</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
   <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2691,7 +2691,7 @@ export default {
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h4 id="-data--computed-">[强制] <code>data</code> 中禁止使用 <code>computed</code> 中的变量</h4>
+</code></pre></div><h4 id="强制-data-中禁止使用-computed-中的变量">[强制] <code>data</code> 中禁止使用 <code>computed</code> 中的变量</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
   <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2713,7 +2713,7 @@ export default {
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h4 id="-props-data-computed-methods--key">[强制] <code>props</code>, <code>data</code>, <code>computed</code>, <code>methods</code> 中不能有重复的 <code>key</code></h4>
+</code></pre></div><h4 id="强制-props-data-computed-methods-中不能有重复的-key">[强制] <code>props</code>, <code>data</code>, <code>computed</code>, <code>methods</code> 中不能有重复的 <code>key</code></h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">// bad
 &lt;<span style="color:#f92672">script</span>&gt;
   <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -2751,8 +2751,8 @@ export default {
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h3 id="43-">4.3 变量</h3>
-<h4 id="--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</h4>
+</code></pre></div><h3 id="43-变量">4.3 变量</h3>
+<h4 id="强制-不能使用-vue-中的保留字段命名变量">[强制] 不能使用 Vue 中的保留字段命名变量</h4>
 <p>解释：</p>
 <p>Vue 使用 <code>_</code> 前缀来定义其自身的私有属性，所以使用相同的前缀 (比如 <code>_update</code>) 有覆写实例属性的风险。即便你检查确认 Vue 当前版本没有用到这个属性名，也不能保证和将来的版本没有冲突。</p>
 <p>对于 <code>$</code> 前缀来说，其在 Vue 生态系统中的目的是暴露给用户的一个特殊的实例属性，所以把它用于私有属性并不合适。</p>
@@ -2778,8 +2778,8 @@ export default {
     }
   };
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h3 id="44-">4.4 其它</h3>
-<h4 id="--emit--2--object--event-">[建议] 组件中使用 <code>$emit</code> 事件时携带的参数，个数不应该超过 <code>2</code> 个。建议将数据参数以 <code>Object</code> 形式传递，将事件参数 <code>event</code> 放在最后</h4>
+</code></pre></div><h3 id="44-其它">4.4 其它</h3>
+<h4 id="建议-组件中使用-emit-事件时携带的参数个数不应该超过-2-个建议将数据参数以-object-形式传递将事件参数-event-放在最后">[建议] 组件中使用 <code>$emit</code> 事件时携带的参数，个数不应该超过 <code>2</code> 个。建议将数据参数以 <code>Object</code> 形式传递，将事件参数 <code>event</code> 放在最后</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// bad
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">onClick</span>(<span style="color:#a6e22e">event</span>) {
     <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$emit</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value1</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value2</span>, <span style="color:#a6e22e">event</span>);
@@ -2801,15 +2801,15 @@ export default {
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">onClick</span>(<span style="color:#a6e22e">event</span>) {
    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$emit</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#a6e22e">event</span>);
 }
-</code></pre></div><h2 id="5-style-">5 style 部分</h2>
-<h4 id="--7">[建议] 为组件样式设置作用域</h4>
+</code></pre></div><h2 id="5-style-部分">5 style 部分</h2>
+<h4 id="建议-为组件样式设置作用域">[建议] 为组件样式设置作用域</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">scoped</span>&gt;
   .<span style="color:#a6e22e">button</span> {
     <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
   }
 &lt;/<span style="color:#f92672">style</span>&gt;
-</code></pre></div><h2 id="6-">6 参考</h2>
+</code></pre></div><h2 id="6-参考">6 参考</h2>
 <ul>
 <li><a href="https://cn.vuejs.org/v2/style-guide/">vue 代码风格指南</a></li>
 <li><a href="https://github.com/ecomfe/spec/blob/master/html-style-guide.md">ecomfe HTML 编码规范</a></li>
@@ -2863,123 +2863,123 @@ export default {
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#vue-">Vue 组件代码规范</a>
+    <li><a href="#vue-组件代码规范">Vue 组件代码规范</a>
       <ul>
-        <li><a href="#1-">1 前言</a></li>
-        <li><a href="#2-">2 代码风格</a>
+        <li><a href="#1-前言">1 前言</a></li>
+        <li><a href="#2-代码风格">2 代码风格</a>
           <ul>
-            <li><a href="#21-">2.1 缩进</a>
+            <li><a href="#21-缩进">2.1 缩进</a>
               <ul>
-                <li><a href="#--4--2--tab-">[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符</a></li>
+                <li><a href="#强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格或-tab-字符">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格或 <code>tab</code> 字符</a></li>
               </ul>
             </li>
-            <li><a href="#22-">2.2 单行最长限制</a>
+            <li><a href="#22-单行最长限制">2.2 单行最长限制</a>
               <ul>
-                <li><a href="#--120-">[强制] 每行不得超过 120 个字符</a></li>
+                <li><a href="#强制-每行不得超过-120-个字符">[强制] 每行不得超过 <code>120</code> 个字符</a></li>
               </ul>
             </li>
-            <li><a href="#23-">2.3 模块书写顺序</a>
+            <li><a href="#23-模块书写顺序">2.3 模块书写顺序</a>
               <ul>
-                <li><a href="#-template---script---style">[建议] template -> script -> style</a></li>
+                <li><a href="#建议-template---script---style">[建议] <code>template</code> -&gt; <code>script</code> -&gt; <code>style</code></a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#3-template-">3 template 部分</a>
+        <li><a href="#3-template-部分">3 template 部分</a>
           <ul>
-            <li><a href="#31-">3.1 根节点</a>
+            <li><a href="#31-根节点">3.1 根节点</a>
               <ul>
-                <li><a href="#-template-">[强制] template 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
+                <li><a href="#强制-template-根节点只允许包含一个直接子节点以下情况都是不允许的">[强制] <code>template</code> 根节点只允许包含一个直接子节点，以下情况都是不允许的：</a></li>
               </ul>
             </li>
-            <li><a href="#32-">3.2 标签</a>
+            <li><a href="#32-标签">3.2 标签</a>
               <ul>
-                <li><a href="#--html-reserved-html-elements-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 kebab-case</a></li>
-                <li><a href="#html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-">[强制]html void element 不需要闭合，其它类型标签都需要闭合</a></li>
-                <li><a href="#--template-">[强制] 非根结点的 template 标签里必须有一个以上的子结点</a></li>
-                <li><a href="#-template--key-">[强制] template 标签上不能带有 key 属性</a></li>
-                <li><a href="#-">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
-                <li><a href="#---">[强制] 标签右括号 > 的位置：</a></li>
-                <li><a href="#----1">[建议] 自闭合标签的 /> 前不用添加空格</a></li>
+                <li><a href="#强制-自定义组件的标签名不得使用-html-中默认已定义的标签reserved-html-elements要求至少由两个单词组成并且符合-kebab-case">[强制] 自定义组件的标签名不得使用 HTML 中默认已定义的标签（reserved HTML elements），要求至少由两个单词组成，并且符合 <code>kebab-case</code></a></li>
+                <li><a href="#强制html-void-elementhttpswwww3orgtrhtml51syntaxhtmlvoid-elements-不需要闭合其它类型标签都需要闭合">[强制]<a href="https://www.w3.org/TR/html51/syntax.html#void-elements">html void element</a> 不需要闭合，其它类型标签都需要闭合</a></li>
+                <li><a href="#强制-非根结点的-template-标签里必须有一个以上的子结点">[强制] 非根结点的 <code>template</code> 标签里必须有一个以上的子结点</a></li>
+                <li><a href="#强制-template-标签上不能带有-key-属性">[强制] <code>template</code> 标签上不能带有 <code>key</code> 属性</a></li>
+                <li><a href="#强制-如果自定义标签中没有内容需要以自闭合标签形式出现">[强制] 如果自定义标签中没有内容，需要以自闭合标签形式出现</a></li>
+                <li><a href="#强制-标签右括号--的位置">[强制] 标签右括号 <code>&gt;</code> 的位置：</a></li>
+                <li><a href="#建议-自闭合标签的--前不用添加空格">[建议] 自闭合标签的 <code>/&gt;</code> 前不用添加空格</a></li>
               </ul>
             </li>
-            <li><a href="#33-">3.3 属性</a>
+            <li><a href="#33-属性">3.3 属性</a>
               <ul>
-                <li><a href="#--1">[强制] 属性值必须用双引号包围</a></li>
-                <li><a href="#--kebab-case">[强制] 模板中的属性命名需要符合 kebab-case</a></li>
-                <li><a href="#-class--style-">[强制] class / style 属性值不能设置空字符串</a></li>
-                <li><a href="#--true-">[建议] 布尔类型的属性值为 true 时，建议不添加属性值</a></li>
-                <li><a href="#--2--2-">[强制] 当组件的属性多于 2 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 2 个时，可以写在一行内</a></li>
-                <li><a href="#--2">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
-                <li><a href="#-class--style--1">[强制] 不能有重复的属性，class 和 style 除外</a></li>
-                <li><a href="#-slot--kebab-case">[建议] slot 命名采用 kebab-case</a></li>
-                <li><a href="#-ref--pascalcase">[建议] ref 命名采用 PascalCase</a></li>
+                <li><a href="#强制-属性值必须用双引号包围">[强制] 属性值必须用双引号包围</a></li>
+                <li><a href="#强制-模板中的属性命名需要符合-kebab-case">[强制] 模板中的属性命名需要符合 <code>kebab-case</code></a></li>
+                <li><a href="#强制-class--style-属性值不能设置空字符串">[强制] <code>class</code> / <code>style</code> 属性值不能设置空字符串</a></li>
+                <li><a href="#建议-布尔类型的属性值为-true-时建议不添加属性值">[建议] 布尔类型的属性值为 <code>true</code> 时，建议不添加属性值</a></li>
+                <li><a href="#强制-当组件的属性多于-2-个时必须分成多行每行写一个属性只有属性个数小于或等于-2-个时可以写在一行内">[强制] 当组件的属性多于 <code>2</code> 个时，必须分成多行，每行写一个属性；只有属性个数小于或等于 <code>2</code> 个时，可以写在一行内</a></li>
+                <li><a href="#建议-当元素有多个属性时应该按照统一的顺序书写">[建议] 当元素有多个属性时，应该按照统一的顺序书写</a></li>
+                <li><a href="#强制-不能有重复的属性class-和-style-除外">[强制] 不能有重复的属性，<code>class</code> 和 <code>style</code> 除外</a></li>
+                <li><a href="#建议-slot-命名采用-kebab-case">[建议] <code>slot</code> 命名采用 <code>kebab-case</code></a></li>
+                <li><a href="#建议-ref-命名采用-pascalcase">[建议] <code>ref</code> 命名采用 <code>PascalCase</code></a></li>
               </ul>
             </li>
-            <li><a href="#34-">3.4 指令</a>
+            <li><a href="#34-指令">3.4 指令</a>
               <ul>
-                <li><a href="#--v-for--key">[强制] 在使用 v-for 的元素上添加 key，以便维护内部组件及其子树的状态</a></li>
-                <li><a href="#--v-if--v-for-">[建议] 不要把 v-if 和 v-for 同时用在同一个元素上</a></li>
-                <li><a href="#--3">[建议] 以下指令统一使用缩写</a></li>
+                <li><a href="#强制-在使用-v-for-的元素上添加-key以便维护内部组件及其子树的状态">[强制] 在使用 <code>v-for</code> 的元素上添加 <code>key</code>，以便维护内部组件及其子树的状态</a></li>
+                <li><a href="#建议-不要把-v-if-和-v-for-同时用在同一个元素上">[建议] 不要把 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上</a></li>
+                <li><a href="#建议-以下指令统一使用缩写">[建议] 以下指令统一使用缩写</a></li>
               </ul>
             </li>
-            <li><a href="#35-mustache">3.5 插值（Mustache）</a>
+            <li><a href="#35-插值mustache">3.5 插值（Mustache）</a>
               <ul>
-                <li><a href="#--4">[建议] 插值左右添加一个空格</a></li>
+                <li><a href="#建议-插值左右添加一个空格">[建议] 插值左右添加一个空格</a></li>
               </ul>
             </li>
-            <li><a href="#36-">3.6 空格</a>
+            <li><a href="#36-空格">3.6 空格</a>
               <ul>
-                <li><a href="#--5">[强制] 不能有多余空格</a></li>
+                <li><a href="#强制-不能有多余空格">[强制] 不能有多余空格</a></li>
               </ul>
             </li>
-            <li><a href="#37-">3.7 变量</a>
+            <li><a href="#37-变量">3.7 变量</a>
               <ul>
-                <li><a href="#--6">[强制] 不能有多余的变量</a></li>
-                <li><a href="#--this">[强制] 禁止在插值中使用 this</a></li>
+                <li><a href="#强制-不能有多余的变量">[强制] 不能有多余的变量</a></li>
+                <li><a href="#强制-禁止在插值中使用-this">[强制] 禁止在插值中使用 <code>this</code></a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#4-javascript-">4 javascript 部分</a>
+        <li><a href="#4-javascript-部分">4 javascript 部分</a>
           <ul>
             <li><a href="#41-props">4.1 props</a>
               <ul>
-                <li><a href="#--props-">[强制] 指定 props 类型</a></li>
-                <li><a href="#--props--required--required--false">[强制] 如果 props 没有指定为 required 或者 required 为 false，则需要指定默认值</a></li>
-                <li><a href="#-props-">[强制] props 提供的默认值必须满足校验条件</a></li>
-                <li><a href="#--props--camelcase">[强制] 在 props 中声明的属性，其属性名应该始终符合 camelCase</a></li>
+                <li><a href="#强制-指定-props-类型">[强制] 指定 <code>props</code> 类型</a></li>
+                <li><a href="#强制-如果-props-没有指定为-required-或者-required-为-false则需要指定默认值">[强制] 如果 <code>props</code> 没有指定为 <code>required</code> 或者 <code>required</code> 为 <code>false</code>，则需要指定默认值</a></li>
+                <li><a href="#强制-props-提供的默认值必须满足校验条件">[强制] <code>props</code> 提供的默认值必须满足校验条件</a></li>
+                <li><a href="#强制-在-props-中声明的属性其属性名应该始终符合-camelcase">[强制] 在 <code>props</code> 中声明的属性，其属性名应该始终符合 <code>camelCase</code></a></li>
               </ul>
             </li>
             <li><a href="#42-data">4.2 data</a>
               <ul>
-                <li><a href="#-data-">[强制] data 必须是一个函数</a></li>
-                <li><a href="#-data--computed-">[强制] data 中禁止使用 computed 中的变量</a></li>
-                <li><a href="#-props-data-computed-methods--key">[强制] props, data, computed, methods 中不能有重复的 key</a></li>
+                <li><a href="#强制-data-必须是一个函数">[强制] <code>data</code> 必须是一个函数</a></li>
+                <li><a href="#强制-data-中禁止使用-computed-中的变量">[强制] <code>data</code> 中禁止使用 <code>computed</code> 中的变量</a></li>
+                <li><a href="#强制-props-data-computed-methods-中不能有重复的-key">[强制] <code>props</code>, <code>data</code>, <code>computed</code>, <code>methods</code> 中不能有重复的 <code>key</code></a></li>
               </ul>
             </li>
-            <li><a href="#43-">4.3 变量</a>
+            <li><a href="#43-变量">4.3 变量</a>
               <ul>
-                <li><a href="#--vue-">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
+                <li><a href="#强制-不能使用-vue-中的保留字段命名变量">[强制] 不能使用 Vue 中的保留字段命名变量</a></li>
               </ul>
             </li>
-            <li><a href="#44-">4.4 其它</a>
+            <li><a href="#44-其它">4.4 其它</a>
               <ul>
-                <li><a href="#--emit--2--object--event-">[建议] 组件中使用 $emit 事件时携带的参数，个数不应该超过 2 个。建议将数据参数以 Object 形式传递，将事件参数 event 放在最后</a></li>
+                <li><a href="#建议-组件中使用-emit-事件时携带的参数个数不应该超过-2-个建议将数据参数以-object-形式传递将事件参数-event-放在最后">[建议] 组件中使用 <code>$emit</code> 事件时携带的参数，个数不应该超过 <code>2</code> 个。建议将数据参数以 <code>Object</code> 形式传递，将事件参数 <code>event</code> 放在最后</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#5-style-">5 style 部分</a>
+        <li><a href="#5-style-部分">5 style 部分</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#--7">[建议] 为组件样式设置作用域</a></li>
+                <li><a href="#建议-为组件样式设置作用域">[建议] 为组件样式设置作用域</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#6-">6 参考</a></li>
+        <li><a href="#6-参考">6 参考</a></li>
       </ul>
     </li>
   </ul>

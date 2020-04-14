@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/study-frontend/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
 
 
-<script defer src="/study-frontend/en.search.min.33c8443d441a15eaed05deb742d32d1d17ce2055c1d0462c8f3610d31ebd5426.js" integrity="sha256-M8hEPUQaFertBd63QtMtHRfOIFXB0EYsjzYQ0x69VCY="></script>
+<script defer src="/study-frontend/en.search.min.101bf5337a6c00a978085df97ab57a731f0266c0e89422d484fdb12ce1665d3d.js" integrity="sha256-EBv1M3psAKl4CF35erV6cx8CZsDolCLUhP2xLOFmXT0="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-frontend/docs/node/basic/version/index.xml" title="前端学习笔记" />
 <!--
@@ -1900,14 +1900,14 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#nodejs-">Node.js 版本</a>
+    <li><a href="#nodejs-版本">Node.js 版本</a>
       <ul>
-        <li><a href="#heading">版本控制</a>
+        <li><a href="#版本控制">版本控制</a>
           <ul>
-            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm">nvm-sh/nvm</a>
+            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm"><a href="https://github.com/nvm-sh/nvm">nvm-sh/nvm</a></a>
               <ul>
-                <li><a href="#heading-1">安装</a></li>
-                <li><a href="#heading-2">基础命令</a></li>
+                <li><a href="#安装">安装</a></li>
+                <li><a href="#基础命令">基础命令</a></li>
               </ul>
             </li>
           </ul>
@@ -1924,17 +1924,17 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="nodejs-">Node.js 版本</h1>
-<h2 id="heading">版本控制</h2>
+<article class="markdown"><h1 id="nodejs-版本">Node.js 版本</h1>
+<h2 id="版本控制">版本控制</h2>
 <h3 id="nvm-shnvmhttpsgithubcomnvm-shnvm"><a href="https://github.com/nvm-sh/nvm">nvm-sh/nvm</a></h3>
 <p><img src="https://img.shields.io/github/stars/nvm-sh/nvm.svg" alt="Github stars"></p>
 <p>Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions</p>
-<h4 id="heading-1">安装</h4>
+<h4 id="安装">安装</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-export NVM_DIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME-<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.nvm</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/nvm</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-<span style="color:#f92672">[</span> -s <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\.</span> <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh</span><span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># This loads nvm</span>
-</code></pre></div><h4 id="heading-2">基础命令</h4>
+export NVM_DIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME-<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.nvm&#34;</span> <span style="color:#f92672">||</span> printf %s <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>XDG_CONFIG_HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/nvm&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">[</span> -s <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\.</span> <span style="color:#e6db74">&#34;</span>$NVM_DIR<span style="color:#e6db74">/nvm.sh&#34;</span> <span style="color:#75715e"># This loads nvm</span>
+</code></pre></div><h4 id="基础命令">基础命令</h4>
 <ul>
 <li><code>install</code>
 <ul>
@@ -1999,14 +1999,14 @@ nvm which 5.0
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#nodejs-">Node.js 版本</a>
+    <li><a href="#nodejs-版本">Node.js 版本</a>
       <ul>
-        <li><a href="#heading">版本控制</a>
+        <li><a href="#版本控制">版本控制</a>
           <ul>
-            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm">nvm-sh/nvm</a>
+            <li><a href="#nvm-shnvmhttpsgithubcomnvm-shnvm"><a href="https://github.com/nvm-sh/nvm">nvm-sh/nvm</a></a>
               <ul>
-                <li><a href="#heading-1">安装</a></li>
-                <li><a href="#heading-2">基础命令</a></li>
+                <li><a href="#安装">安装</a></li>
+                <li><a href="#基础命令">基础命令</a></li>
               </ul>
             </li>
           </ul>
